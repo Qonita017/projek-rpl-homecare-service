@@ -1,0 +1,25 @@
+# Environment variables & secrets
+.env
+
+# Uploaded user files
+public/uploads/damage_photos/*
+!public/uploads/damage_photos/.gitkeep
+public/uploads/payments/*
+!public/uploads/payments/.gitkeep
+
+# Sessions & Python cache
+telegram_userbot/*.session
+telegram_userbot/*.session-journal
+__pycache__/
+*.pyc
+
+# IDE & Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS files
+Thumbs.db
+Desktop.ini
+.DS_Store

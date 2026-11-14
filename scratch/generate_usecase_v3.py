@@ -1,0 +1,484 @@
+import os
+import subprocess
+
+html_content = """<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    background-color: #F8FAFC;
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 2950px;
+    height: 2150px;
+  }
+  svg {
+    width: 2950px;
+    height: 2150px;
+  }
+</style>
+</head>
+<body>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2950 2150" width="2950" height="2150">
+  <defs>
+    <!-- Arrowhead markers -->
+    <marker id="arrow-include" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 9 5 L 0 8.5" fill="none" stroke="#2563EB" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+    </marker>
+    <marker id="arrow-extend" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 9 5 L 0 8.5" fill="none" stroke="#D97706" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+    </marker>
+
+    <!-- Filters for drop shadows -->
+    <filter id="shadow-box" x="-2%" y="-1%" width="104%" height="103%" filterUnits="userSpaceOnUse">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#0F172A" flood-opacity="0.06"/>
+    </filter>
+    <filter id="shadow-oval" x="-5%" y="-10%" width="110%" height="125%" filterUnits="userSpaceOnUse">
+      <feDropShadow dx="0" dy="2" stdDeviation="4" flood-color="#0F172A" flood-opacity="0.05"/>
+    </filter>
+    <filter id="shadow-actor" x="-20%" y="-10%" width="140%" height="130%">
+      <feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="#0F172A" flood-opacity="0.08"/>
+    </filter>
+  </defs>
+
+  <!-- Background Canvas -->
+  <rect width="2950" height="2150" fill="#F8FAFC"/>
+
+  <!-- Top Title Banner -->
+  <rect x="50" y="30" width="2850" height="105" rx="14" fill="#1E293B" filter="url(#shadow-box)"/>
+  <text x="1475" y="72" text-anchor="middle" fill="#FFFFFF" font-size="28" font-weight="800" letter-spacing="1">
+    USE CASE DIAGRAM — SISTEM INFORMASI HOMECARE SERVICE
+  </text>
+  <text x="1475" y="108" text-anchor="middle" fill="#94A3B8" font-size="15" font-weight="500">
+    Mata Kuliah: Rekayasa Perangkat Lunak (TIKB2503021) | Mahasiswa: Qonita Goniyun Ulum | Dosen Pengampu: Yudhistira Arie Wijaya, M.Kom., CDS.
+  </text>
+
+  <!-- ================= SYSTEM BOUNDARY ================= -->
+  <rect x="440" y="165" width="2020" height="1940" rx="22" fill="#FFFFFF" stroke="#0284C7" stroke-width="3" filter="url(#shadow-box)"/>
+  
+  <!-- System Boundary Header Tag -->
+  <rect x="440" y="165" width="600" height="46" rx="16" fill="#0284C7"/>
+  <text x="465" y="196" fill="#FFFFFF" font-size="18" font-weight="700" letter-spacing="0.5">
+    🏢 BATAS SISTEM: APLIKASI WEB HOMECARE SERVICE
+  </text>
+
+
+  <!-- ================= ASSOCIATION LINES ================= -->
+
+  <!-- --- 1. ADMIN ASSOCIATIONS (Actor Center: 220, 440) --- -->
+  <!-- To Master Data (780, 270) -->
+  <line x1="220" y1="440" x2="780" y2="270" stroke="#94A3B8" stroke-width="1.8"/>
+  <!-- To Penugasan Teknisi (780, 380) -->
+  <line x1="220" y1="440" x2="780" y2="380" stroke="#94A3B8" stroke-width="1.8"/>
+  <!-- To Verifikasi Transfer (780, 490) -->
+  <line x1="220" y1="440" x2="780" y2="490" stroke="#94A3B8" stroke-width="1.8"/>
+  <!-- To Analitik Omset (780, 600) -->
+  <line x1="220" y1="440" x2="780" y2="600" stroke="#94A3B8" stroke-width="1.8"/>
+  <!-- To Moderasi Ulasan (780, 710) -->
+  <line x1="220" y1="440" x2="780" y2="710" stroke="#94A3B8" stroke-width="1.8"/>
+  <!-- To Login Sistem (1450, 330) -->
+  <line x1="220" y1="440" x2="1450" y2="330" stroke="#CBD5E1" stroke-width="1.5"/>
+  <!-- To Kelola Profil (1450, 490) -->
+  <line x1="220" y1="440" x2="1450" y2="490" stroke="#CBD5E1" stroke-width="1.5"/>
+  <!-- To Konfigurasi AI (2120, 1300) -->
+  <path d="M 220 440 Q 400 210 1200 220 T 2120 1300" fill="none" stroke="#D97706" stroke-width="1.6" stroke-dasharray="6,4"/>
+
+  <!-- --- 2. TEKNISI ASSOCIATIONS (Actor Center: 220, 1020) --- -->
+  <!-- To Pantau Tugas (780, 840) -->
+  <line x1="220" y1="1020" x2="780" y2="840" stroke="#94A3B8" stroke-width="1.8"/>
+  <!-- To Update Status (780, 950) -->
+  <line x1="220" y1="1020" x2="780" y2="950" stroke="#94A3B8" stroke-width="1.8"/>
+  <!-- To Input Laporan Fisik (780, 1060) -->
+  <line x1="220" y1="1020" x2="780" y2="1060" stroke="#94A3B8" stroke-width="1.8"/>
+  <!-- To Konfirmasi Selesai (780, 1170) -->
+  <line x1="220" y1="1020" x2="780" y2="1170" stroke="#94A3B8" stroke-width="1.8"/>
+  <!-- To Login Sistem (1450, 330) -->
+  <line x1="220" y1="1020" x2="1450" y2="330" stroke="#CBD5E1" stroke-width="1.5"/>
+  <!-- To Kelola Profil (1450, 490) -->
+  <line x1="220" y1="1020" x2="1450" y2="490" stroke="#CBD5E1" stroke-width="1.5"/>
+
+  <!-- --- 3. CUSTOMER ASSOCIATIONS (Actor Center: 220, 1600) --- -->
+  <!-- To Registrasi Akun (780, 1300) -->
+  <line x1="220" y1="1600" x2="780" y2="1300" stroke="#94A3B8" stroke-width="1.8"/>
+  <!-- To Buat Pesanan (780, 1420) -->
+  <line x1="220" y1="1600" x2="780" y2="1420" stroke="#94A3B8" stroke-width="1.8"/>
+  <!-- To Lacak Status (780, 1540) -->
+  <line x1="220" y1="1600" x2="780" y2="1540" stroke="#94A3B8" stroke-width="1.8"/>
+  <!-- To Pembayaran Servis (780, 1660) -->
+  <line x1="220" y1="1600" x2="780" y2="1660" stroke="#94A3B8" stroke-width="1.8"/>
+  <!-- To Memberikan Ulasan (1450, 1150) -->
+  <line x1="220" y1="1600" x2="1450" y2="1150" stroke="#CBD5E1" stroke-width="1.5"/>
+  <!-- To Riwayat & Cetak Kwitansi (1450, 1340) -->
+  <line x1="220" y1="1600" x2="1450" y2="1340" stroke="#CBD5E1" stroke-width="1.5"/>
+  <!-- To Login Sistem (1450, 330) -->
+  <line x1="220" y1="1600" x2="1450" y2="330" stroke="#CBD5E1" stroke-width="1.5"/>
+  <!-- To AI Diagnosis (2120, 500) -->
+  <path d="M 220 1600 Q 800 1900 1500 1850 T 2120 500" fill="none" stroke="#F59E0B" stroke-width="1.8"/>
+  <!-- To AI Chatbot (2120, 900) -->
+  <path d="M 220 1600 Q 1100 1950 1700 1750 T 2120 900" fill="none" stroke="#F59E0B" stroke-width="1.8"/>
+
+  <!-- --- 4. RIGHT ACTOR: AI CHATBOT & ENGINE (Center: 2695, 910) --- -->
+  <!-- Connects to UC-01 AI Diagnosis (2120, 500) -->
+  <line x1="2695" y1="910" x2="2120" y2="500" stroke="#D97706" stroke-width="2.8"/>
+  <!-- Connects to UC-02 AI Chatbot (2120, 900) -->
+  <line x1="2695" y1="910" x2="2120" y2="900" stroke="#D97706" stroke-width="2.8"/>
+  <!-- Connects to UC-20 Konfigurasi AI (2120, 1300) -->
+  <line x1="2695" y1="910" x2="2120" y2="1300" stroke="#D97706" stroke-width="2.8"/>
+
+
+  <!-- ================= STEREOTYPE RELATIONSHIPS (Include / Extend) ================= -->
+
+  <!-- 1. <<include>> Buat Pesanan (780, 1420) -> Login Sistem (1450, 330) -->
+  <path d="M 960 1400 Q 1280 950 1410 380" fill="none" stroke="#2563EB" stroke-width="2" stroke-dasharray="8,5" marker-end="url(#arrow-include)"/>
+  <rect x="1220" y="870" width="96" height="22" rx="4" fill="#EFF6FF" stroke="#BFDBFE" stroke-width="1"/>
+  <text x="1268" y="886" text-anchor="middle" fill="#1D4ED8" font-size="11" font-weight="700">&lt;&lt;include&gt;&gt;</text>
+
+  <!-- 2. <<extend>> AI Smart Diagnosis (2120, 500) -> Buat Pesanan (780, 1420) via CTA Button -->
+  <path d="M 1940 530 Q 1450 900 965 1390" fill="none" stroke="#D97706" stroke-width="2.2" stroke-dasharray="8,5" marker-end="url(#arrow-extend)"/>
+  <rect x="1460" y="810" width="90" height="22" rx="4" fill="#FFFBEB" stroke="#FDE68A" stroke-width="1"/>
+  <text x="1505" y="826" text-anchor="middle" fill="#B45309" font-size="11" font-weight="700">&lt;&lt;extend&gt;&gt;</text>
+
+  <!-- 3. <<extend>> Unggah Bukti Transfer (1450, 900) -> Melakukan Pembayaran (780, 1660) -->
+  <path d="M 1320 930 Q 1080 1250 960 1630" fill="none" stroke="#D97706" stroke-width="2" stroke-dasharray="8,5" marker-end="url(#arrow-extend)"/>
+  <rect x="1110" y="1300" width="90" height="22" rx="4" fill="#FFFBEB" stroke="#FDE68A" stroke-width="1"/>
+  <text x="1155" y="1316" text-anchor="middle" fill="#B45309" font-size="11" font-weight="700">&lt;&lt;extend&gt;&gt;</text>
+
+  <!-- 4. <<include>> Input Laporan Fisik (780, 1060) -> Konfirmasi Selesai (780, 1170) -->
+  <path d="M 780 1105 L 780 1125" fill="none" stroke="#2563EB" stroke-width="2" stroke-dasharray="8,5" marker-end="url(#arrow-include)"/>
+  <rect x="805" y="1102" width="96" height="22" rx="4" fill="#EFF6FF" stroke="#BFDBFE" stroke-width="1"/>
+  <text x="853" y="1118" text-anchor="middle" fill="#1D4ED8" font-size="11" font-weight="700">&lt;&lt;include&gt;&gt;</text>
+
+  <!-- 5. <<include>> Lacak Status (780, 1540) -> Buat Pesanan (780, 1420) -->
+  <path d="M 780 1495 L 780 1465" fill="none" stroke="#2563EB" stroke-width="2" stroke-dasharray="8,5" marker-end="url(#arrow-include)"/>
+  <rect x="805" y="1467" width="96" height="22" rx="4" fill="#EFF6FF" stroke="#BFDBFE" stroke-width="1"/>
+  <text x="853" y="1483" text-anchor="middle" fill="#1D4ED8" font-size="11" font-weight="700">&lt;&lt;include&gt;&gt;</text>
+
+  <!-- 6. <<include>> Ulasan (1450, 1150) -> Login Sistem (1450, 330) -->
+  <path d="M 1450 1105 L 1450 385" fill="none" stroke="#2563EB" stroke-width="2" stroke-dasharray="8,5" marker-end="url(#arrow-include)"/>
+  <rect x="1470" y="680" width="96" height="22" rx="4" fill="#EFF6FF" stroke="#BFDBFE" stroke-width="1"/>
+  <text x="1518" y="696" text-anchor="middle" fill="#1D4ED8" font-size="11" font-weight="700">&lt;&lt;include&gt;&gt;</text>
+
+
+  <!-- ================= USE CASES (OVALS) ================= -->
+
+  <!-- ====== COLUMN A: ADMIN, TEKNISI, CUSTOMER (X: 780) ====== -->
+
+  <!-- --- ADMIN USE CASES (Purple Violet Theme) --- -->
+  <!-- UC-16: Kelola Master Data -->
+  <g filter="url(#shadow-oval)">
+    <ellipse cx="780" cy="270" rx="180" ry="40" fill="#F3E8FF" stroke="#7C3AED" stroke-width="2.5"/>
+    <text x="780" y="264" text-anchor="middle" fill="#5B21B6" font-size="13" font-weight="800">🗃️ UC-16: Kelola Master Data</text>
+    <text x="780" y="284" text-anchor="middle" fill="#5B21B6" font-size="13" font-weight="800">(Alat, Teknisi, &amp; Pelanggan)</text>
+  </g>
+
+  <!-- UC-17: Penugasan Teknisi -->
+  <g filter="url(#shadow-oval)">
+    <ellipse cx="780" cy="380" rx="180" ry="38" fill="#F5F3FF" stroke="#8B5CF6" stroke-width="2"/>
+    <text x="780" y="374" text-anchor="middle" fill="#5B21B6" font-size="13" font-weight="700">👨‍🔧 UC-17: Validasi Order &amp;</text>
+    <text x="780" y="394" text-anchor="middle" fill="#5B21B6" font-size="13" font-weight="700">Penugasan Teknisi Lapangan</text>
+  </g>
+
+  <!-- UC-18: Verifikasi Transfer Pembayaran -->
+  <g filter="url(#shadow-oval)">
+    <ellipse cx="780" cy="490" rx="180" ry="40" fill="#F3E8FF" stroke="#7C3AED" stroke-width="2.5"/>
+    <text x="780" y="484" text-anchor="middle" fill="#5B21B6" font-size="13" font-weight="800">💰 UC-18: Verifikasi Pembayaran</text>
+    <text x="780" y="504" text-anchor="middle" fill="#5B21B6" font-size="13" font-weight="800">Transfer &amp; Konfirmasi LUNAS</text>
+  </g>
+
+  <!-- UC-19: Analitik Omset & Statistik -->
+  <g filter="url(#shadow-oval)">
+    <ellipse cx="780" cy="600" rx="180" ry="40" fill="#F3E8FF" stroke="#7C3AED" stroke-width="2.5"/>
+    <text x="780" y="594" text-anchor="middle" fill="#5B21B6" font-size="13" font-weight="800">📊 UC-19: Monitoring Laporan</text>
+    <text x="780" y="614" text-anchor="middle" fill="#5B21B6" font-size="13" font-weight="800">Statistik &amp; Omset Bisnis Riil</text>
+  </g>
+
+  <!-- UC-21: Moderasi Ulasan -->
+  <g filter="url(#shadow-oval)">
+    <ellipse cx="780" cy="710" rx="180" ry="38" fill="#F5F3FF" stroke="#8B5CF6" stroke-width="2"/>
+    <text x="780" y="704" text-anchor="middle" fill="#5B21B6" font-size="13" font-weight="700">🛡️ UC-21: Moderasi Ulasan &amp;</text>
+    <text x="780" y="724" text-anchor="middle" fill="#5B21B6" font-size="13" font-weight="700">Testimoni Pengguna</text>
+  </g>
+
+  <!-- --- TEKNISI USE CASES (Green Emerald Theme) --- -->
+  <!-- UC-12: Lihat Tugas Masuk -->
+  <g filter="url(#shadow-oval)">
+    <ellipse cx="780" cy="840" rx="180" ry="38" fill="#ECFDF5" stroke="#10B981" stroke-width="2"/>
+    <text x="780" y="834" text-anchor="middle" fill="#065F46" font-size="13" font-weight="700">📋 UC-12: Memantau Penugasan</text>
+    <text x="780" y="854" text-anchor="middle" fill="#065F46" font-size="13" font-weight="700">Pekerjaan Servis Masuk</text>
+  </g>
+
+  <!-- UC-13: Update Status Lapangan -->
+  <g filter="url(#shadow-oval)">
+    <ellipse cx="780" cy="950" rx="180" ry="38" fill="#ECFDF5" stroke="#10B981" stroke-width="2"/>
+    <text x="780" y="944" text-anchor="middle" fill="#065F46" font-size="13" font-weight="700">🛵 UC-13: Update Status Lapangan</text>
+    <text x="780" y="964" text-anchor="middle" fill="#065F46" font-size="13" font-weight="700">(Menuju Lokasi / Perbaikan)</text>
+  </g>
+
+  <!-- UC-14: Input Laporan Fisik & Part -->
+  <g filter="url(#shadow-oval)">
+    <ellipse cx="780" cy="1060" rx="180" ry="38" fill="#ECFDF5" stroke="#10B981" stroke-width="2"/>
+    <text x="780" y="1054" text-anchor="middle" fill="#065F46" font-size="13" font-weight="700">🔧 UC-14: Input Laporan Fisik,</text>
+    <text x="780" y="1074" text-anchor="middle" fill="#065F46" font-size="13" font-weight="700">Tindakan &amp; Suku Cadang</text>
+  </g>
+
+  <!-- UC-15: Konfirmasi Servis Selesai -->
+  <g filter="url(#shadow-oval)">
+    <ellipse cx="780" cy="1170" rx="180" ry="38" fill="#D1FAE5" stroke="#059669" stroke-width="2.5"/>
+    <text x="780" y="1164" text-anchor="middle" fill="#065F46" font-size="13" font-weight="800">✅ UC-15: Konfirmasi Pekerjaan</text>
+    <text x="780" y="1184" text-anchor="middle" fill="#065F46" font-size="13" font-weight="800">Servis Selesai &amp; Uji Fungsi</text>
+  </g>
+
+  <!-- --- CUSTOMER USE CASES (Sky Blue Theme) --- -->
+  <!-- UC-03: Registrasi Akun Baru -->
+  <g filter="url(#shadow-oval)">
+    <ellipse cx="780" cy="1300" rx="180" ry="38" fill="#F0F9FF" stroke="#0284C7" stroke-width="2"/>
+    <text x="780" y="1305" text-anchor="middle" fill="#0369A1" font-size="13.5" font-weight="700">UC-03: Registrasi Akun Baru</text>
+  </g>
+
+  <!-- UC-04: Buat Pesanan Servis -->
+  <g filter="url(#shadow-oval)">
+    <ellipse cx="780" cy="1420" rx="180" ry="40" fill="#E0F2FE" stroke="#0284C7" stroke-width="2.5"/>
+    <text x="780" y="1414" text-anchor="middle" fill="#0369A1" font-size="13" font-weight="800">📌 UC-04: Buat Pesanan Servis</text>
+    <text x="780" y="1434" text-anchor="middle" fill="#0369A1" font-size="13" font-weight="800">Peralatan (Booking Online)</text>
+  </g>
+
+  <!-- UC-05: Lacak Status Pengerjaan -->
+  <g filter="url(#shadow-oval)">
+    <ellipse cx="780" cy="1540" rx="180" ry="38" fill="#F0F9FF" stroke="#0284C7" stroke-width="2"/>
+    <text x="780" y="1534" text-anchor="middle" fill="#0369A1" font-size="13" font-weight="700">UC-05: Lacak Status Progres</text>
+    <text x="780" y="1554" text-anchor="middle" fill="#0369A1" font-size="13" font-weight="700">Pengerjaan Servis Real-Time</text>
+  </g>
+
+  <!-- UC-06: Pembayaran Servis -->
+  <g filter="url(#shadow-oval)">
+    <ellipse cx="780" cy="1660" rx="180" ry="40" fill="#E0F2FE" stroke="#0284C7" stroke-width="2.5"/>
+    <text x="780" y="1654" text-anchor="middle" fill="#0369A1" font-size="13" font-weight="800">💳 UC-06: Melakukan Pembayaran</text>
+    <text x="780" y="1674" text-anchor="middle" fill="#0369A1" font-size="13" font-weight="800">(CASH / Transfer Bank)</text>
+  </g>
+
+
+  <!-- ====== COLUMN B: SHARED & TRANSACTIONAL (X: 1450) ====== -->
+
+  <!-- UC-10: Login Sistem (Autentikasi Terpusat) -->
+  <g filter="url(#shadow-oval)">
+    <ellipse cx="1450" cy="330" rx="180" ry="48" fill="#F1F5F9" stroke="#475569" stroke-width="3"/>
+    <text x="1450" y="323" text-anchor="middle" fill="#0F172A" font-size="14" font-weight="800">🔐 UC-10: Login Sistem</text>
+    <text x="1450" y="343" text-anchor="middle" fill="#475569" font-size="12" font-weight="600">(Autentikasi Sesi Multi-Role)</text>
+  </g>
+
+  <!-- UC-11: Kelola Profil & Password -->
+  <g filter="url(#shadow-oval)">
+    <ellipse cx="1450" cy="490" rx="175" ry="38" fill="#F8FAFC" stroke="#64748B" stroke-width="2"/>
+    <text x="1450" y="484" text-anchor="middle" fill="#334155" font-size="13" font-weight="700">⚙️ UC-11: Kelola Data Profil</text>
+    <text x="1450" y="504" text-anchor="middle" fill="#334155" font-size="13" font-weight="700">&amp; Ubah Kata Sandi Akun</text>
+  </g>
+
+  <!-- UC-11B: Unggah Bukti Transfer -->
+  <g filter="url(#shadow-oval)">
+    <ellipse cx="1450" cy="900" rx="175" ry="38" fill="#EFF6FF" stroke="#3B82F6" stroke-width="2"/>
+    <text x="1450" y="894" text-anchor="middle" fill="#1D4ED8" font-size="13" font-weight="700">📤 UC-11B: Unggah File Bukti</text>
+    <text x="1450" y="914" text-anchor="middle" fill="#1D4ED8" font-size="13" font-weight="700">Transfer Pembayaran Bank</text>
+  </g>
+
+  <!-- UC-07: Memberikan Ulasan & Rating -->
+  <g filter="url(#shadow-oval)">
+    <ellipse cx="1450" cy="1150" rx="175" ry="40" fill="#F0F9FF" stroke="#0284C7" stroke-width="2"/>
+    <text x="1450" y="1144" text-anchor="middle" fill="#0369A1" font-size="13" font-weight="700">⭐ UC-07: Memberikan Ulasan &amp;</text>
+    <text x="1450" y="1164" text-anchor="middle" fill="#0369A1" font-size="13" font-weight="700">Rating Kinerja Teknisi</text>
+  </g>
+
+  <!-- UC-08: Riwayat Pesanan & Kwitansi -->
+  <g filter="url(#shadow-oval)">
+    <ellipse cx="1450" cy="1340" rx="175" ry="40" fill="#F0F9FF" stroke="#0284C7" stroke-width="2"/>
+    <text x="1450" y="1334" text-anchor="middle" fill="#0369A1" font-size="13" font-weight="700">📄 UC-08: Melihat Riwayat Servis</text>
+    <text x="1450" y="1354" text-anchor="middle" fill="#0369A1" font-size="13" font-weight="700">&amp; Cetak Kwitansi Pembayaran</text>
+  </g>
+
+
+  <!-- ====== COLUMN C: ARTIFICIAL INTELLIGENCE SERVICES (X: 2120) ====== -->
+
+  <!-- UC-01: AI Diagnosis (Amber Gold Theme) -->
+  <g filter="url(#shadow-oval)">
+    <ellipse cx="2120" cy="500" rx="200" ry="52" fill="#FEF3C7" stroke="#D97706" stroke-width="3"/>
+    <text x="2120" y="492" text-anchor="middle" fill="#92400E" font-size="14.5" font-weight="800">✨ UC-01: Konsultasi AI Smart</text>
+    <text x="2120" y="515" text-anchor="middle" fill="#92400E" font-size="14.5" font-weight="800">Diagnosis Kerusakan Alat</text>
+  </g>
+
+  <!-- UC-02: AI Virtual Assistant (Amber Gold Theme) -->
+  <g filter="url(#shadow-oval)">
+    <ellipse cx="2120" cy="900" rx="200" ry="52" fill="#FEF3C7" stroke="#D97706" stroke-width="3"/>
+    <text x="2120" y="892" text-anchor="middle" fill="#92400E" font-size="14.5" font-weight="800">🤖 UC-02: Interaksi HomeCare AI</text>
+    <text x="2120" y="915" text-anchor="middle" fill="#92400E" font-size="14.5" font-weight="800">Assistant (Chatbot Live DB)</text>
+  </g>
+
+  <!-- UC-20: Konfigurasi AI Multi-Provider -->
+  <g filter="url(#shadow-oval)">
+    <ellipse cx="2120" cy="1300" rx="200" ry="52" fill="#FEF3C7" stroke="#D97706" stroke-width="3"/>
+    <text x="2120" y="1292" text-anchor="middle" fill="#92400E" font-size="14.5" font-weight="800">⚡ UC-20: Konfigurasi AI Multi-</text>
+    <text x="2120" y="1315" text-anchor="middle" fill="#92400E" font-size="14.5" font-weight="800">Provider &amp; Tes Koneksi API</text>
+  </g>
+
+
+  <!-- ================= LEFT ACTORS: FORMAL UML STICKMAN (MANUSIA LIDI - NO FACE) ================= -->
+
+  <!-- ACTOR 1: ADMINISTRATOR (Top Left - Center: 220, 440) -->
+  <g id="actor-admin" filter="url(#shadow-actor)">
+    <rect x="75" y="310" width="290" height="260" rx="16" fill="#FFFFFF" stroke="#7C3AED" stroke-width="2.5"/>
+    <!-- Head: Pure clean circle, NO FACE -->
+    <circle cx="220" cy="365" r="28" fill="#FFFFFF" stroke="#7C3AED" stroke-width="3.5"/>
+    <!-- Spine / Body -->
+    <line x1="220" y1="393" x2="220" y2="465" stroke="#7C3AED" stroke-width="3.5" stroke-linecap="round"/>
+    <!-- Arms -->
+    <line x1="165" y1="422" x2="275" y2="422" stroke="#7C3AED" stroke-width="3.5" stroke-linecap="round"/>
+    <!-- Left Leg -->
+    <line x1="220" y1="465" x2="175" y2="520" stroke="#7C3AED" stroke-width="3.5" stroke-linecap="round"/>
+    <!-- Right Leg -->
+    <line x1="220" y1="465" x2="265" y2="520" stroke="#7C3AED" stroke-width="3.5" stroke-linecap="round"/>
+    <!-- Label Banner -->
+    <rect x="95" y="528" width="250" height="34" rx="8" fill="#7C3AED"/>
+    <text x="220" y="550" text-anchor="middle" fill="#FFFFFF" font-size="14" font-weight="800">&laquo;Actor&raquo; ADMINISTRATOR</text>
+  </g>
+
+  <!-- ACTOR 2: TEKNISI (Middle Left - Center: 220, 1020) -->
+  <g id="actor-teknisi" filter="url(#shadow-actor)">
+    <rect x="75" y="890" width="290" height="260" rx="16" fill="#FFFFFF" stroke="#059669" stroke-width="2.5"/>
+    <!-- Head: Pure clean circle, NO FACE -->
+    <circle cx="220" cy="945" r="28" fill="#FFFFFF" stroke="#059669" stroke-width="3.5"/>
+    <!-- Spine / Body -->
+    <line x1="220" y1="973" x2="220" y2="1045" stroke="#059669" stroke-width="3.5" stroke-linecap="round"/>
+    <!-- Arms -->
+    <line x1="165" y1="1002" x2="275" y2="1002" stroke="#059669" stroke-width="3.5" stroke-linecap="round"/>
+    <!-- Left Leg -->
+    <line x1="220" y1="1045" x2="175" y2="1100" stroke="#059669" stroke-width="3.5" stroke-linecap="round"/>
+    <!-- Right Leg -->
+    <line x1="220" y1="1045" x2="265" y2="1100" stroke="#059669" stroke-width="3.5" stroke-linecap="round"/>
+    <!-- Label Banner -->
+    <rect x="95" y="1108" width="250" height="34" rx="8" fill="#059669"/>
+    <text x="220" y="1130" text-anchor="middle" fill="#FFFFFF" font-size="14" font-weight="800">&laquo;Actor&raquo; TEKNISI</text>
+  </g>
+
+  <!-- ACTOR 3: CUSTOMER (Bottom Left - Center: 220, 1600) -->
+  <g id="actor-customer" filter="url(#shadow-actor)">
+    <rect x="75" y="1470" width="290" height="260" rx="16" fill="#FFFFFF" stroke="#0284C7" stroke-width="2.5"/>
+    <!-- Head: Pure clean circle, NO FACE -->
+    <circle cx="220" cy="1525" r="28" fill="#FFFFFF" stroke="#0284C7" stroke-width="3.5"/>
+    <!-- Spine / Body -->
+    <line x1="220" y1="1553" x2="220" y2="1625" stroke="#0284C7" stroke-width="3.5" stroke-linecap="round"/>
+    <!-- Arms -->
+    <line x1="165" y1="1582" x2="275" y2="1582" stroke="#0284C7" stroke-width="3.5" stroke-linecap="round"/>
+    <!-- Left Leg -->
+    <line x1="220" y1="1625" x2="175" y2="1680" stroke="#0284C7" stroke-width="3.5" stroke-linecap="round"/>
+    <!-- Right Leg -->
+    <line x1="220" y1="1625" x2="265" y2="1680" stroke="#0284C7" stroke-width="3.5" stroke-linecap="round"/>
+    <!-- Label Banner -->
+    <rect x="95" y="1688" width="250" height="34" rx="8" fill="#0284C7"/>
+    <text x="220" y="1710" text-anchor="middle" fill="#FFFFFF" font-size="14" font-weight="800">&laquo;Actor&raquo; CUSTOMER</text>
+  </g>
+
+
+  <!-- ================= RIGHT ACTOR: FORMAL UML STICKMAN AI CHATBOT & ENGINE (MANUSIA LIDI - NO FACE) ================= -->
+
+  <!-- RIGHT ACTOR: AI CHATBOT & ENGINE (Centered Vertically - Center: 2695, 910) -->
+  <g id="actor-ai" filter="url(#shadow-actor)">
+    <rect x="2510" y="690" width="370" height="440" rx="22" fill="#FFFFFF" stroke="#D97706" stroke-width="3"/>
+    
+    <!-- Top Header Tag -->
+    <rect x="2535" y="718" width="320" height="32" rx="8" fill="#FEF3C7" stroke="#FDE68A" stroke-width="1"/>
+    <text x="2695" y="739" text-anchor="middle" fill="#B45309" font-size="12" font-weight="800">&laquo;Secondary Actor / External AI&raquo;</text>
+
+    <!-- Stickman Head: Pure clean circle, NO FACE -->
+    <circle cx="2695" cy="815" r="35" fill="#FFFFFF" stroke="#D97706" stroke-width="4.5"/>
+    <!-- Spine / Body -->
+    <line x1="2695" y1="850" x2="2695" y2="950" stroke="#D97706" stroke-width="4.5" stroke-linecap="round"/>
+    <!-- Arms -->
+    <line x1="2620" y1="885" x2="2770" y2="885" stroke="#D97706" stroke-width="4.5" stroke-linecap="round"/>
+    <!-- Left Leg -->
+    <line x1="2695" y1="950" x2="2635" y2="1030" stroke="#D97706" stroke-width="4.5" stroke-linecap="round"/>
+    <!-- Right Leg -->
+    <line x1="2695" y1="950" x2="2755" y2="1030" stroke="#D97706" stroke-width="4.5" stroke-linecap="round"/>
+
+    <!-- Actor Label Banner -->
+    <rect x="2535" y="1048" width="320" height="52" rx="10" fill="#D97706"/>
+    <text x="2695" y="1074" text-anchor="middle" fill="#FFFFFF" font-size="16" font-weight="800">AI CHATBOT &amp; ENGINE</text>
+    <text x="2695" y="1094" text-anchor="middle" fill="#FEF3C7" font-size="11.5" font-weight="700">Google Gemini / NVIDIA / Groq</text>
+  </g>
+
+
+  <!-- ================= LEGEND BOX (BOTTOM CENTER) ================= -->
+  <g id="diagram-legend" filter="url(#shadow-box)">
+    <rect x="470" y="1935" width="1960" height="150" rx="14" fill="#F8FAFC" stroke="#CBD5E1" stroke-width="2"/>
+    <text x="500" y="1962" fill="#0F172A" font-size="15" font-weight="800">📌 KETERANGAN &amp; LEGENDA SIMBOL USE CASE DIAGRAM LENGKAP</text>
+    
+    <!-- Row 1: Badges -->
+    <rect x="520" y="1980" width="22" height="14" rx="4" fill="#F3E8FF" stroke="#7C3AED" stroke-width="1.5"/>
+    <text x="550" y="1992" fill="#334155" font-size="12" font-weight="600">Use Case Administrator</text>
+
+    <rect x="850" y="1980" width="22" height="14" rx="4" fill="#ECFDF5" stroke="#10B981" stroke-width="1.5"/>
+    <text x="880" y="1992" fill="#334155" font-size="12" font-weight="600">Use Case Teknisi Lapangan</text>
+
+    <rect x="1190" y="1980" width="22" height="14" rx="4" fill="#E0F2FE" stroke="#0284C7" stroke-width="1.5"/>
+    <text x="1220" y="1992" fill="#334155" font-size="12" font-weight="600">Use Case Customer (Pelanggan)</text>
+
+    <rect x="1560" y="1980" width="22" height="14" rx="4" fill="#FEF3C7" stroke="#D97706" stroke-width="1.5"/>
+    <text x="1590" y="1992" fill="#334155" font-size="12" font-weight="600">Layanan Kecerdasan Artifisial (AI)</text>
+
+    <rect x="1980" y="1980" width="22" height="14" rx="4" fill="#F1F5F9" stroke="#475569" stroke-width="1.5"/>
+    <text x="2010" y="1992" fill="#334155" font-size="12" font-weight="600">Shared Authentication &amp; Core</text>
+
+    <!-- Row 2: Relationships -->
+    <line x1="520" y1="2025" x2="570" y2="2025" stroke="#94A3B8" stroke-width="2.5"/>
+    <text x="580" y="2029" fill="#334155" font-size="11.5" font-weight="600">Asosiasi Aktor Primer (Garis Solid): Menghubungkan Aktor Manusia dengan Use Case terkait.</text>
+
+    <line x1="1400" y1="2025" x2="1450" y2="2025" stroke="#D97706" stroke-width="2.5"/>
+    <text x="1460" y="2029" fill="#334155" font-size="11.5" font-weight="600">Asosiasi Aktor Eksternal AI: Interaksi inferensi &amp; konfigurasi dengan AI Chatbot &amp; Engine.</text>
+
+    <line x1="520" y1="2055" x2="570" y2="2055" stroke="#2563EB" stroke-width="2" stroke-dasharray="6,4" marker-end="url(#arrow-include)"/>
+    <text x="580" y="2059" fill="#334155" font-size="11.5" font-weight="600">&lt;&lt;include&gt;&gt; Relasi Wajib: Eksekusi use case asal memicu use case tujuan secara mutlak.</text>
+
+    <line x1="1400" y1="2055" x2="1450" y2="2055" stroke="#D97706" stroke-width="2" stroke-dasharray="6,4" marker-end="url(#arrow-extend)"/>
+    <text x="1460" y="2059" fill="#334155" font-size="11.5" font-weight="600">&lt;&lt;extend&gt;&gt; Relasi Kondisional: Use case tujuan memperluas use case asal saat kondisi terpenuhi.</text>
+  </g>
+
+</svg>
+</body>
+</html>
+"""
+
+html_path = r"C:\xampp\htdocs\jasa peralatan runah tangga\scratch\usecase.html"
+with open(html_path, "w", encoding="utf-8") as f:
+    f.write(html_content)
+
+print(f"HTML SVG written to {html_path}")
+
+chrome_path = r"C:\Program Files\Google\Chrome\Application\chrome.exe"
+dest1 = r"C:\xampp\htdocs\jasa peralatan runah tangga\usecase_homecare_service.png"
+dest2 = r"D:\A KULIAH\Semester 3\Perangkat Rekayasa Lunak\usecase_homecare_service.png"
+dest3 = r"C:\Users\Hype AMD\.gemini\antigravity\brain\1d0a8584-928e-4397-bea6-0d262cd1d11e\usecase_homecare_service.png"
+
+cmd = [
+    chrome_path,
+    "--headless=new",
+    "--disable-gpu",
+    f"--screenshot={dest1}",
+    "--window-size=2950,2150",
+    html_path
+]
+
+res = subprocess.run(cmd, capture_output=True, text=True)
+print(f"Chrome returncode: {res.returncode}")
+print(f"Stderr: {res.stderr}")
+
+if os.path.exists(dest1):
+    print(f"PNG created successfully at: {dest1} (Size: {os.path.getsize(dest1)} bytes)")
+    import shutil
+    shutil.copy2(dest1, dest2)
+    shutil.copy2(dest1, dest3)
+    print(f"Copied PNG successfully to: {dest2} and {dest3}")
+else:
+    print("Failed to generate PNG.")
+
