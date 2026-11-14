@@ -82,3 +82,4 @@ Sistem mengidentifikasi **4 Aktor** utama yang terbagi secara tegas: **3 Aktor P
 2. **Relasi `<<extend>>` (Relasi Kondisional / Opsional):**
    * `Konsultasi AI Diagnosis (UC-01)` $\xrightarrow{\ll extend\gg}$ `Buat Pesanan Servis (UC-04)`: Hasil diagnosis kerusakan dapat diperluas menjadi pemesanan servis resmi melalui tombol Call-to-Action (*otomatis menyalin data alat dan keluhan*).
    * `Unggah Bukti Transfer (UC-11B)` $\xrightarrow{\ll extend\gg}$ `Melakukan Pembayaran (UC-06)`: Form unggah slip bukti bayar hanya dieksekusi secara opsional apabila customer memilih jalur pembayaran transfer bank (bukan Cash).
+

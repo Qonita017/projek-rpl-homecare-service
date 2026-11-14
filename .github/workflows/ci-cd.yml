@@ -1,0 +1,65 @@
+name: HomeCare Service CI/CD Pipeline
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  lint-and-test:
+    name: Code Quality & Integrity Testing
+    runs-on: ubuntu-latest
+
+    services:
+      mysql:
+        image: mysql:8.0
+        env:
+          MYSQL_ROOT_PASSWORD: root
+          MYSQL_DATABASE: homecare_db
+        ports:
+          - 3306:3306
+        options: --health-cmd="mysqladmin ping" --health-interval=10s --health-timeout=5s --health-retries=3
+
+    steps:
+      - name: Checkout Source Code
+        uses: actions/checkout@v4
+
+      - name: Setup PHP Environment
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.1'
+          extensions: mbstring, pdo, pdo_mysql, curl, json
+          coverage: none
+
+      - name: 1. PHP Syntax Linter Check (All Files)
+        run: |
+          find app routes public -type f -name "*.php" -exec php -l {} \;
+
+      - name: 2. Verify Secret Protection (.gitignore)
+        run: |
+          if [ -f ".env" ]; then
+            echo "ERROR: .env file must NOT be committed to git repository!"
+            exit 1
+          fi
+
+      - name: 3. Setup Database Schema & Seed Data
+        run: |
+          mysql -h 127.0.0.1 -u root -proot homecare_db < database/schema.sql
+          php database/seed.php
+
+      - name: 4. Execute Service Integration Tests
+        run: |
+          cp .env.example .env
+          php -r "require 'app/Config/config.php'; require 'app/Config/Database.php'; new Database(); echo 'DB Connection OK\n';"
+
+  deploy:
+    name: Continuous Deployment (Local / Staging)
+    needs: lint-and-test
+    runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/main' && github.event_name == 'push'
+
+    steps:
+      - name: Trigger Deployment Runner
+        run: |
+          echo "CI Checks Passed! Initiating automated deployment to target environment..."

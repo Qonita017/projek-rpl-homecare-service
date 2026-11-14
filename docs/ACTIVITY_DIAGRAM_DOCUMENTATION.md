@@ -136,3 +136,4 @@ Activity Diagram ini menggambarkan **alur aktivitas utama** pada sistem **HomeCa
 | $\longrightarrow$ | **Control Flow (Solid)** | Aliran kontrol berurutan dari satu aksi ke aksi berikutnya. |
 | $-\!-\!\longrightarrow$ | **Object/Event Flow (Dashed)** | Aliran sinyal notifikasi atau komunikasi asinkron antarentitas. |
 | $\cdot\cdot\cdot\longrightarrow$ | **Shared Access (Dotted)** | Fitur atau aksi bersama yang dapat diakses oleh beberapa aktor. |
+
