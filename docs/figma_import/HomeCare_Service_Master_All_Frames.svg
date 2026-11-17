@@ -1,0 +1,566 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="3060" height="2100" viewBox="0 0 3060 2100" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap');
+      text { font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; }
+    </style>
+    <filter id="shadow-sm" x="-5%" y="-5%" width="110%" height="110%" filterUnits="userSpaceOnUse">
+      <feDropShadow dx="0" dy="1" stdDeviation="2" flood-color="#000000" flood-opacity="0.05" />
+    </filter>
+    <filter id="shadow-md" x="-10%" y="-10%" width="120%" height="120%" filterUnits="userSpaceOnUse">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#000000" flood-opacity="0.08" />
+    </filter>
+  </defs>
+  <rect width="3060" height="2100" fill="#F8FAFC" />
+  
+    <!-- ARTBOARD 1: LANDING PAGE -->
+    <g id="Frame_01_Landing_Page" transform="translate(60, 60)">
+      <rect width="1440" height="960" fill="#F8FAFC" rx="12" stroke="#CBD5E1" stroke-width="2" />
+      
+  
+    
+    <!-- NAVBAR GLOBAL -->
+    <g id="Navbar_Global">
+      <rect width="1440" height="72" fill="#1565C0" />
+      <g id="Brand_Logo" transform="translate(60, 20)">
+        <rect width="32" height="32" rx="8" fill="#FFFFFF" fill-opacity="0.2" />
+        <path d="M16 8L8 15V24H13V19H19V24H24V15L16 8Z" fill="#FFFFFF" />
+        <text x="42" y="22" font-size="18" font-weight="700" fill="#FFFFFF">HomeCare Service</text>
+        <text x="195" y="21" font-size="12" font-weight="600" fill="#93C5FD"></text>
+      </g>
+      <g id="Nav_Links" transform="translate(480, 26)">
+        <text x="0" y="16" font-size="14" font-weight="600" fill="#FFFFFF">Beranda</text>
+        <text x="90" y="16" font-size="14" font-weight="600" fill="#BFDBFE">AI Diagnosis</text>
+        <text x="210" y="16" font-size="14" font-weight="600" fill="#BFDBFE">Pesanan Saya</text>
+        <text x="340" y="16" font-size="14" font-weight="600" fill="#BFDBFE">AI Assistant</text>
+        <text x="460" y="16" font-size="14" font-weight="600" fill="#BFDBFE">Pembayaran</text>
+      </g>
+      <g id="User_Profile" transform="translate(1180, 18)">
+        <rect width="90" height="36" rx="18" fill="#F59E0B" />
+        <text x="45" y="22" font-size="11" font-weight="700" fill="#FFFFFF" text-anchor="middle">CUSTOMER</text>
+        <rect x="100" width="100" height="36" rx="18" fill="#EF4444" />
+        <text x="150" y="22" font-size="12" font-weight="600" fill="#FFFFFF" text-anchor="middle">Keluar</text>
+      </g>
+    </g>
+    
+    
+    <!-- HERO SECTION -->
+    <g id="Hero_Section" transform="translate(60, 110)">
+      <rect width="1320" height="340" rx="16" fill="#1E40AF" />
+      <g id="Hero_Text" transform="translate(60, 50)">
+        <rect width="180" height="28" rx="14" fill="#3B82F6" />
+        <text x="90" y="19" font-size="12" font-weight="600" fill="#FFFFFF" text-anchor="middle">✨ Solusi Servis Cerdas Berbasis AI</text>
+        <text x="0" y="80" font-size="34" font-weight="700" fill="#FFFFFF">Perbaikan &amp; Perawatan Peralatan</text>
+        <text x="0" y="125" font-size="34" font-weight="700" fill="#93C5FD">Rumah Tangga Cepat, Tepat &amp; Terpercaya</text>
+        <text x="0" y="170" font-size="15" font-weight="400" fill="#DBEAFE">Konsultasikan keluhan kerusakan alat elektronik Anda dengan AI Smart Diagnosis.</text>
+        <text x="0" y="195" font-size="15" font-weight="400" fill="#DBEAFE">Dapatkan estimasi biaya wajar dan teknisi berpengalaman langsung ke rumah Anda.</text>
+        
+        <!-- CTA BUTTONS -->
+        <g id="CTA_Buttons" transform="translate(0, 225)">
+          <rect width="210" height="48" rx="8" fill="#F59E0B" />
+          <text x="105" y="30" font-size="15" font-weight="700" fill="#FFFFFF" text-anchor="middle">⚡ Konsultasi AI Diagnosis</text>
+          
+          <rect x="230" width="180" height="48" rx="8" fill="#FFFFFF" fill-opacity="0.15" stroke="#FFFFFF" stroke-width="1.5" />
+          <text x="320" y="30" font-size="14" font-weight="600" fill="#FFFFFF" text-anchor="middle">📅 Pesan Servis Sekarang</text>
+        </g>
+      </g>
+    </g>
+
+    <!-- SECTION KATALOG ALAT -->
+    <g id="Catalog_Section" transform="translate(60, 480)">
+      <text x="0" y="30" font-size="22" font-weight="700" fill="#1E293B">Katalog Peralatan Rumah Tangga yang Didukung</text>
+      <text x="0" y="55" font-size="14" font-weight="400" fill="#64748B">Estimasi tarif perbaikan transparan berdasarkan data pasar resmi</text>
+      
+      <!-- GRID CARDS (4 CARDS) -->
+      <g id="Card_AC" transform="translate(0, 80)">
+        <rect width="310" height="260" rx="12" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1" filter="url(#shadow-sm)" />
+        <rect x="20" y="20" width="56" height="56" rx="12" fill="#EFF6FF" />
+        <text x="48" y="55" font-size="24" text-anchor="middle">❄️</text>
+        <text x="20" y="110" font-size="18" font-weight="700" fill="#1E293B">Air Conditioner (AC)</text>
+        <text x="20" y="135" font-size="13" font-weight="400" fill="#64748B">Panasonic, Daikin, Sharp, LG, Samsung</text>
+        <text x="20" y="175" font-size="12" font-weight="600" fill="#64748B">Kisaran Biaya Servis:</text>
+        <text x="20" y="200" font-size="16" font-weight="700" fill="#1565C0">Rp 75.000 - Rp 250.000</text>
+        <rect x="20" y="215" width="270" height="32" rx="6" fill="#F1F5F9" />
+        <text x="155" y="236" font-size="12" font-weight="600" fill="#1E40AF" text-anchor="middle">Diagnosa Masalah AC →</text>
+      </g>
+
+      <g id="Card_Kulkas" transform="translate(335, 80)">
+        <rect width="310" height="260" rx="12" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1" filter="url(#shadow-sm)" />
+        <rect x="20" y="20" width="56" height="56" rx="12" fill="#EFF6FF" />
+        <text x="48" y="55" font-size="24" text-anchor="middle">🧊</text>
+        <text x="20" y="110" font-size="18" font-weight="700" fill="#1E293B">Lemari Es (Kulkas)</text>
+        <text x="20" y="135" font-size="13" font-weight="400" fill="#64748B">Sharp, Polytron, LG, Aqua, Toshiba</text>
+        <text x="20" y="175" font-size="12" font-weight="600" fill="#64748B">Kisaran Biaya Servis:</text>
+        <text x="20" y="200" font-size="16" font-weight="700" fill="#1565C0">Rp 120.000 - Rp 300.000</text>
+        <rect x="20" y="215" width="270" height="32" rx="6" fill="#F1F5F9" />
+        <text x="155" y="236" font-size="12" font-weight="600" fill="#1E40AF" text-anchor="middle">Diagnosa Masalah Kulkas →</text>
+      </g>
+
+      <g id="Card_MesinCuci" transform="translate(670, 80)">
+        <rect width="310" height="260" rx="12" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1" filter="url(#shadow-sm)" />
+        <rect x="20" y="20" width="56" height="56" rx="12" fill="#EFF6FF" />
+        <text x="48" y="55" font-size="24" text-anchor="middle">🧺</text>
+        <text x="20" y="110" font-size="18" font-weight="700" fill="#1E293B">Mesin Cuci</text>
+        <text x="20" y="135" font-size="13" font-weight="400" fill="#64748B">Front Loading, Top Loading 1 &amp; 2 Tabung</text>
+        <text x="20" y="175" font-size="12" font-weight="600" fill="#64748B">Kisaran Biaya Servis:</text>
+        <text x="20" y="200" font-size="16" font-weight="700" fill="#1565C0">Rp 90.000 - Rp 220.000</text>
+        <rect x="20" y="215" width="270" height="32" rx="6" fill="#F1F5F9" />
+        <text x="155" y="236" font-size="12" font-weight="600" fill="#1E40AF" text-anchor="middle">Diagnosa Mesin Cuci →</text>
+      </g>
+
+      <g id="Card_Kompor" transform="translate(1005, 80)">
+        <rect width="310" height="260" rx="12" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1" filter="url(#shadow-sm)" />
+        <rect x="20" y="20" width="56" height="56" rx="12" fill="#EFF6FF" />
+        <text x="48" y="55" font-size="24" text-anchor="middle">🔥</text>
+        <text x="20" y="110" font-size="18" font-weight="700" fill="#1E293B">Kompor Listrik / Gas</text>
+        <text x="20" y="135" font-size="13" font-weight="400" fill="#64748B">Rinnai, Quantum, Modena, Philips</text>
+        <text x="20" y="175" font-size="12" font-weight="600" fill="#64748B">Kisaran Biaya Servis:</text>
+        <text x="20" y="200" font-size="16" font-weight="700" fill="#1565C0">Rp 60.000 - Rp 150.000</text>
+        <rect x="20" y="215" width="270" height="32" rx="6" fill="#F1F5F9" />
+        <text x="155" y="236" font-size="12" font-weight="600" fill="#1E40AF" text-anchor="middle">Diagnosa Kompor →</text>
+      </g>
+    </g>
+
+    <!-- FOOTER -->
+    <g id="Footer" transform="translate(0, 880)">
+      <rect width="1440" height="80" fill="#0F172A" />
+      <text x="60" y="45" font-size="13" fill="#94A3B8">© 2026 HomeCare Service. Rekayasa Perangkat Lunak - Qonita Goniyun Ulum (STMIK IKMI Cirebon)</text>
+      <text x="1380" y="45" font-size="13" fill="#60A5FA" text-anchor="end">PHP Native MVC • MySQL • Bootstrap 5</text>
+    </g>
+    
+
+    </g>
+
+    <!-- ARTBOARD 2: AI SMART DIAGNOSIS -->
+    <g id="Frame_02_AI_Smart_Diagnosis" transform="translate(1560, 60)">
+      <rect width="1440" height="960" fill="#F8FAFC" rx="12" stroke="#CBD5E1" stroke-width="2" />
+      
+  
+    
+    <!-- NAVBAR GLOBAL -->
+    <g id="Navbar_Global">
+      <rect width="1440" height="72" fill="#1565C0" />
+      <g id="Brand_Logo" transform="translate(60, 20)">
+        <rect width="32" height="32" rx="8" fill="#FFFFFF" fill-opacity="0.2" />
+        <path d="M16 8L8 15V24H13V19H19V24H24V15L16 8Z" fill="#FFFFFF" />
+        <text x="42" y="22" font-size="18" font-weight="700" fill="#FFFFFF">HomeCare Service</text>
+        <text x="195" y="21" font-size="12" font-weight="600" fill="#93C5FD">— AI Smart Diagnosis</text>
+      </g>
+      <g id="Nav_Links" transform="translate(480, 26)">
+        <text x="0" y="16" font-size="14" font-weight="600" fill="#BFDBFE">Beranda</text>
+        <text x="90" y="16" font-size="14" font-weight="600" fill="#FFFFFF">AI Diagnosis</text>
+        <text x="210" y="16" font-size="14" font-weight="600" fill="#BFDBFE">Pesanan Saya</text>
+        <text x="340" y="16" font-size="14" font-weight="600" fill="#BFDBFE">AI Assistant</text>
+        <text x="460" y="16" font-size="14" font-weight="600" fill="#BFDBFE">Pembayaran</text>
+      </g>
+      <g id="User_Profile" transform="translate(1180, 18)">
+        <rect width="90" height="36" rx="18" fill="#F59E0B" />
+        <text x="45" y="22" font-size="11" font-weight="700" fill="#FFFFFF" text-anchor="middle">CUSTOMER</text>
+        <rect x="100" width="100" height="36" rx="18" fill="#EF4444" />
+        <text x="150" y="22" font-size="12" font-weight="600" fill="#FFFFFF" text-anchor="middle">Keluar</text>
+      </g>
+    </g>
+    
+    
+    <g id="Content_AI_Diagnosis" transform="translate(60, 100)">
+      <!-- HEADER -->
+      <text x="0" y="26" font-size="24" font-weight="700" fill="#1E293B">AI Assistant Diagnosis Kerusakan Peralatan</text>
+      <text x="0" y="52" font-size="14" font-weight="400" fill="#64748B">Gunakan model kecerdasan buatan untuk mengidentifikasi penyebab kerusakan dan estimasi biaya perbaikan</text>
+
+      <!-- LEFT COLUMN: INPUT FORM -->
+      <g id="Diagnosis_Form_Card" transform="translate(0, 75)">
+        <rect width="480" height="680" rx="12" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1" filter="url(#shadow-sm)" />
+        <g transform="translate(24, 24)">
+          <text x="0" y="20" font-size="16" font-weight="700" fill="#1E293B">Formulir Gejala Kerusakan</text>
+          
+          <text x="0" y="60" font-size="13" font-weight="600" fill="#334155">Pilih Peralatan Rumah Tangga:</text>
+          <rect y="72" width="432" height="44" rx="8" fill="#F8FAFC" stroke="#CBD5E1" stroke-width="1" />
+          <text x="14" y="99" font-size="14" fill="#0F172A">Kulkas / Lemari Es (Sharp - 2 Pintu)</text>
+          
+          <text x="0" y="145" font-size="13" font-weight="600" fill="#334155">Keluhan Utama Kerusakan:</text>
+          <rect y="157" width="432" height="44" rx="8" fill="#F8FAFC" stroke="#CBD5E1" stroke-width="1" />
+          <text x="14" y="184" font-size="14" fill="#0F172A">Kulkas Kurang Dingin, Freezer Berbunga Es Tebal</text>
+          
+          <text x="0" y="230" font-size="13" font-weight="600" fill="#334155">Gejala Tambahan / Suara Abnormal (Opsional):</text>
+          <rect y="242" width="432" height="80" rx="8" fill="#F8FAFC" stroke="#CBD5E1" stroke-width="1" />
+          <text x="14" y="270" font-size="13" fill="#0F172A">Bunyi klik berulang dari kompresor bagian belakang,</text>
+          <text x="14" y="292" font-size="13" fill="#0F172A">bagian bawah sama sekali tidak dingin.</text>
+          
+          <text x="0" y="350" font-size="12" font-weight="600" fill="#64748B">Contoh Keluhan Cepat:</text>
+          <g transform="translate(0, 362)">
+            <rect width="130" height="30" rx="15" fill="#EFF6FF" stroke="#BFDBFE" />
+            <text x="65" y="20" font-size="11" font-weight="600" fill="#1D4ED8" text-anchor="middle">AC Tidak Dingin</text>
+            
+            <rect x="140" width="135" height="30" rx="15" fill="#EFF6FF" stroke="#BFDBFE" />
+            <text x="207" y="20" font-size="11" font-weight="600" fill="#1D4ED8" text-anchor="middle">Mesin Cuci Macet</text>
+            
+            <rect x="285" width="140" height="30" rx="15" fill="#EFF6FF" stroke="#BFDBFE" />
+            <text x="355" y="20" font-size="11" font-weight="600" fill="#1D4ED8" text-anchor="middle">Kulkas Bunyi Klik</text>
+          </g>
+
+          <!-- SUBMIT BUTTON -->
+          <rect y="420" width="432" height="50" rx="8" fill="#1565C0" />
+          <text x="216" y="451" font-size="15" font-weight="700" fill="#FFFFFF" text-anchor="middle">⚡ Analisis Kerusakan dengan AI</text>
+          
+          <rect y="490" width="432" height="90" rx="8" fill="#F1F5F9" />
+          <text x="14" y="515" font-size="12" font-weight="600" fill="#475569">💡 Informasi Engine AI Aktif:</text>
+          <text x="14" y="538" font-size="11" fill="#64748B">• Provider: Google Gemini API (gemini-2.5-flash)</text>
+          <text x="14" y="556" font-size="11" fill="#64748B">• Fallback: Smart Heuristic Rule Engine (Aktif Otomatis)</text>
+        </g>
+      </g>
+
+      <!-- RIGHT COLUMN: 5 DIAGNOSIS RESULT CARDS (From user screenshot) -->
+      <g id="Diagnosis_Results_Cards" transform="translate(510, 75)">
+        <!-- Card 1: Analisis Kerusakan -->
+        <g id="Card_1" transform="translate(0, 0)">
+          <rect width="810" height="110" rx="10" fill="#EFF6FF" stroke="#BFDBFE" stroke-width="1" />
+          <text x="20" y="30" font-size="14" font-weight="700" fill="#1E40AF">1. Analisis Kerusakan &amp; Gejala Utama</text>
+          <text x="20" y="58" font-size="12.5" fill="#1E293B">Terjadi kegagalan pada sistem defrost otomatis (pencair es) atau overload kompresor.</text>
+          <text x="20" y="80" font-size="12.5" fill="#1E293B">Sirkulasi udara dingin dari freezer ke ruang pendingin bawah terhalang oleh tumpukan es tebal.</text>
+        </g>
+
+        <!-- Card 2: Penyebab -->
+        <g id="Card_2" transform="translate(0, 125)">
+          <rect width="810" height="110" rx="10" fill="#FEF3C7" stroke="#FDE68A" stroke-width="1" />
+          <text x="20" y="30" font-size="14" font-weight="700" fill="#B45309">2. Kemungkinan Penyebab &amp; Komponen Terkait</text>
+          <text x="20" y="58" font-size="12.5" fill="#1E293B">Penyebab utama meliputi: sensor bimetal defrost rusak, timer defrost macet, heater pemanas putus,</text>
+          <text x="20" y="80" font-size="12.5" fill="#1E293B">atau relay start kompresor aus sehingga overload protector memutus aliran listrik secara periodik.</text>
+        </g>
+
+        <!-- Card 3: Panduan Penanganan Mandiri -->
+        <g id="Card_3" transform="translate(0, 250)">
+          <rect width="810" height="110" rx="10" fill="#ECFDF5" stroke="#A7F3D0" stroke-width="1" />
+          <text x="20" y="30" font-size="14" font-weight="700" fill="#047857">3. Panduan Penanganan Awal yang Aman di Rumah</text>
+          <text x="20" y="58" font-size="12.5" fill="#1E293B">Matikan kulkas dan cabut kabel power selama 6-8 jam untuk mencairkan akumulasi bunga es secara alami.</text>
+          <text x="20" y="80" font-size="12.5" fill="#1E293B">Hindari mencongkel es dengan pisau/benda tajam karena berisiko menusuk pipa evaporator freon.</text>
+        </g>
+
+        <!-- Card 4: Saran Teknisi -->
+        <g id="Card_4" transform="translate(0, 375)">
+          <rect width="810" height="110" rx="10" fill="#F5F3FF" stroke="#DDD6FE" stroke-width="1" />
+          <text x="20" y="30" font-size="14" font-weight="700" fill="#6D28D9">4. Saran &amp; Rekomendasi Pemeriksaan Teknisi</text>
+          <text x="20" y="58" font-size="12.5" fill="#1E293B">Pemeriksaan fisik langsung oleh teknisi diperlukan untuk menguji kontinuitas bimetal defrost,</text>
+          <text x="20" y="80" font-size="12.5" fill="#1E293B">mengukur arus starting relay kompresor, dan memeriksa tekanan sirkulasi gas freon.</text>
+        </g>
+
+        <!-- Card 5: Estimasi Biaya -->
+        <g id="Card_5" transform="translate(0, 500)">
+          <rect width="810" height="95" rx="10" fill="#DCFCE7" stroke="#86EFAC" stroke-width="1.5" />
+          <text x="20" y="32" font-size="15" font-weight="700" fill="#15803D">💰 5. Estimasi Perkiraan Biaya Wajar</text>
+          <text x="20" y="62" font-size="18" font-weight="800" fill="#166534">Rp 120.000 — Rp 250.000</text>
+          <text x="240" y="62" font-size="12" fill="#15803D">(Estimasi komponen bimetal / starting relay + jasa pengerjaan teknisi)</text>
+        </g>
+
+        <!-- ACTION BUTTON TO ORDER -->
+        <g id="CTA_To_Order" transform="translate(0, 615)">
+          <rect width="810" height="52" rx="8" fill="#10B981" />
+          <text x="405" y="32" font-size="15" font-weight="700" fill="#FFFFFF" text-anchor="middle">📅 Pesan Teknisi dengan Hasil Diagnosa Ini →</text>
+        </g>
+      </g>
+    </g>
+    
+
+    </g>
+
+    <!-- ARTBOARD 3: AI ASSISTANT CHATBOT -->
+    <g id="Frame_03_AI_Assistant_Chatbot" transform="translate(60, 1080)">
+      <rect width="1440" height="960" fill="#F8FAFC" rx="12" stroke="#CBD5E1" stroke-width="2" />
+      
+  
+    
+    <!-- NAVBAR GLOBAL -->
+    <g id="Navbar_Global">
+      <rect width="1440" height="72" fill="#1565C0" />
+      <g id="Brand_Logo" transform="translate(60, 20)">
+        <rect width="32" height="32" rx="8" fill="#FFFFFF" fill-opacity="0.2" />
+        <path d="M16 8L8 15V24H13V19H19V24H24V15L16 8Z" fill="#FFFFFF" />
+        <text x="42" y="22" font-size="18" font-weight="700" fill="#FFFFFF">HomeCare Service</text>
+        <text x="195" y="21" font-size="12" font-weight="600" fill="#93C5FD">— HomeCare AI Assistant</text>
+      </g>
+      <g id="Nav_Links" transform="translate(480, 26)">
+        <text x="0" y="16" font-size="14" font-weight="600" fill="#BFDBFE">Beranda</text>
+        <text x="90" y="16" font-size="14" font-weight="600" fill="#BFDBFE">AI Diagnosis</text>
+        <text x="210" y="16" font-size="14" font-weight="600" fill="#BFDBFE">Pesanan Saya</text>
+        <text x="340" y="16" font-size="14" font-weight="600" fill="#FFFFFF">AI Assistant</text>
+        <text x="460" y="16" font-size="14" font-weight="600" fill="#BFDBFE">Pembayaran</text>
+      </g>
+      <g id="User_Profile" transform="translate(1180, 18)">
+        <rect width="90" height="36" rx="18" fill="#F59E0B" />
+        <text x="45" y="22" font-size="11" font-weight="700" fill="#FFFFFF" text-anchor="middle">ADMIN</text>
+        <rect x="100" width="100" height="36" rx="18" fill="#EF4444" />
+        <text x="150" y="22" font-size="12" font-weight="600" fill="#FFFFFF" text-anchor="middle">Keluar</text>
+      </g>
+    </g>
+    
+    
+    <g id="Chatbot_Layout" transform="translate(60, 95)">
+      <!-- SIDEBAR RIWAYAT CHAT (From user screenshot) -->
+      <g id="Chat_History_Sidebar">
+        <rect width="320" height="740" rx="12" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1" filter="url(#shadow-sm)" />
+        <g transform="translate(20, 24)">
+          <text x="0" y="20" font-size="16" font-weight="700" fill="#1E293B">Riwayat Chat Saya</text>
+          <rect x="230" y="0" width="30" height="30" rx="15" fill="#EFF6FF" stroke="#BFDBFE" />
+          <text x="245" y="20" font-size="16" font-weight="700" fill="#1D4ED8" text-anchor="middle">+</text>
+          
+          <!-- History Items -->
+          <g transform="translate(0, 45)">
+            <rect width="280" height="52" rx="8" fill="#EFF6FF" stroke="#BFDBFE" stroke-width="1" />
+            <text x="14" y="24" font-size="13" font-weight="600" fill="#1E40AF">💬 berapa jumlah omset?</text>
+            <text x="14" y="42" font-size="10.5" fill="#64748B">13 Nov, 13:41  •  28 pesan</text>
+          </g>
+
+          <g transform="translate(0, 110)">
+            <rect width="280" height="52" rx="8" fill="#FFFFFF" stroke="#E2E8F0" />
+            <text x="14" y="24" font-size="13" font-weight="500" fill="#334155">💬 siapa saja customernya?</text>
+            <text x="14" y="42" font-size="10.5" fill="#94A3B8">13 Nov, 13:09  •  2 pesan</text>
+          </g>
+
+          <g transform="translate(0, 175)">
+            <rect width="280" height="52" rx="8" fill="#FFFFFF" stroke="#E2E8F0" />
+            <text x="14" y="24" font-size="13" font-weight="500" fill="#334155">💬 pesanan yang selesai?</text>
+            <text x="14" y="42" font-size="10.5" fill="#94A3B8">12 Nov, 18:52  •  8 pesan</text>
+          </g>
+
+          <g transform="translate(0, 240)">
+            <rect width="280" height="52" rx="8" fill="#FFFFFF" stroke="#E2E8F0" />
+            <text x="14" y="24" font-size="13" font-weight="500" fill="#334155">💬 bagaimana ketersediaan teknisi?</text>
+            <text x="14" y="42" font-size="10.5" fill="#94A3B8">09 Nov, 21:54  •  12 pesan</text>
+          </g>
+
+          <g transform="translate(0, 305)">
+            <rect width="280" height="52" rx="8" fill="#FFFFFF" stroke="#E2E8F0" />
+            <text x="14" y="24" font-size="13" font-weight="500" fill="#334155">💬 katalog harga alat ac?</text>
+            <text x="14" y="42" font-size="10.5" fill="#94A3B8">08 Nov, 21:23  •  18 pesan</text>
+          </g>
+        </g>
+      </g>
+
+      <!-- MAIN CHAT AREA (From user screenshot) -->
+      <g id="Chat_Main_Area" transform="translate(345, 0)">
+        <rect width="975" height="740" rx="12" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1" filter="url(#shadow-sm)" />
+        
+        <!-- CHAT HEADER -->
+        <g id="Chat_Header" transform="translate(24, 20)">
+          <rect width="40" height="40" rx="20" fill="#EFF6FF" />
+          <text x="20" y="26" font-size="20" text-anchor="middle">🤖</text>
+          <text x="52" y="22" font-size="16" font-weight="700" fill="#1E293B">HomeCare AI Assistant</text>
+          <rect x="250" y="4" width="115" height="24" rx="12" fill="#DBEAFE" />
+          <text x="307" y="20" font-size="11" font-weight="700" fill="#1E40AF" text-anchor="middle">Admin Assistant</text>
+          <text x="52" y="38" font-size="11" fill="#10B981">● Terhubung langsung dengan Database &amp; Sistem HomeCare (Live)</text>
+          <line x1="0" y1="52" x2="925" y2="52" stroke="#E2E8F0" stroke-width="1" />
+        </g>
+
+        <!-- CHAT MESSAGES BODY -->
+        <g id="Chat_Messages" transform="translate(24, 90)">
+          <!-- User message 1 -->
+          <g id="Msg_User_1" transform="translate(480, 20)">
+            <rect width="440" height="42" rx="12" fill="#1565C0" />
+            <text x="20" y="26" font-size="13" fill="#FFFFFF">ada berapa jumlah pesanan selesai saat ini?</text>
+          </g>
+
+          <!-- AI message 1 -->
+          <g id="Msg_AI_1" transform="translate(0, 80)">
+            <rect width="40" height="40" rx="20" fill="#1565C0" />
+            <text x="20" y="26" font-size="18" fill="#FFFFFF" text-anchor="middle">🤖</text>
+            <rect x="52" width="580" height="50" rx="12" fill="#F1F5F9" />
+            <text x="72" y="30" font-size="13" fill="#1E293B">Jumlah pesanan yang telah selesai di sistem saat ini ada 8 pesanan.</text>
+          </g>
+
+          <!-- User message 2 -->
+          <g id="Msg_User_2" transform="translate(620, 150)">
+            <rect width="300" height="42" rx="12" fill="#1565C0" />
+            <text x="20" y="26" font-size="13" fill="#FFFFFF">siapa saja customernya?</text>
+          </g>
+
+          <!-- AI message 2 (Actual live DB response from screenshot) -->
+          <g id="Msg_AI_2" transform="translate(0, 210)">
+            <rect width="40" height="40" rx="20" fill="#1565C0" />
+            <text x="20" y="26" font-size="18" fill="#FFFFFF" text-anchor="middle">🤖</text>
+            <rect x="52" width="760" height="150" rx="12" fill="#F1F5F9" />
+            <text x="72" y="30" font-size="12.5" font-weight="700" fill="#1E40AF">HomeCare AI Assistant (Hasil Query Database Live):</text>
+            <text x="72" y="55" font-size="12" fill="#1E293B">Berikut rincian customer terdaftar di sistem:</text>
+            <text x="72" y="78" font-size="11.5" fill="#334155">• Customer #2: Qonita Goniyun Ulum | Telp: 085314724809 | Alamat: Jln. Perjuangan No. 10</text>
+            <text x="72" y="100" font-size="11.5" fill="#334155">• Customer #3: Chat Tester Customer | Telp: 081299998888 | Alamat: Jl. Chat AI No. 1</text>
+            <text x="72" y="122" font-size="11.5" fill="#334155">• Customer #16: Yudhistira | Telp: 085864394008 | Alamat: Jln. Mundu No. 08</text>
+          </g>
+        </g>
+
+        <!-- CHAT INPUT & QUICK CHIPS -->
+        <g id="Chat_Input_Area" transform="translate(24, 610)">
+          <!-- Quick Prompt Chips -->
+          <g id="Chips">
+            <text x="0" y="16" font-size="12" font-weight="600" fill="#64748B">Tanya Cepat:</text>
+            <rect x="80" y="0" width="115" height="26" rx="13" fill="#EFF6FF" stroke="#BFDBFE" />
+            <text x="137" y="17" font-size="11" fill="#1E40AF" text-anchor="middle">📦 Pesanan Saya</text>
+            
+            <rect x="205" y="0" width="105" height="26" rx="13" fill="#EFF6FF" stroke="#BFDBFE" />
+            <text x="257" y="17" font-size="11" fill="#1E40AF" text-anchor="middle">👨‍🔧 Tim Teknisi</text>
+            
+            <rect x="320" y="0" width="110" height="26" rx="13" fill="#EFF6FF" stroke="#BFDBFE" />
+            <text x="375" y="17" font-size="11" fill="#1E40AF" text-anchor="middle">📋 Katalog Alat</text>
+            
+            <rect x="440" y="0" width="120" height="26" rx="13" fill="#EFF6FF" stroke="#BFDBFE" />
+            <text x="500" y="17" font-size="11" fill="#1E40AF" text-anchor="middle">⭐ Rating &amp; Ulasan</text>
+
+            <rect x="570" y="0" width="105" height="26" rx="13" fill="#EFF6FF" stroke="#BFDBFE" />
+            <text x="622" y="17" font-size="11" fill="#1E40AF" text-anchor="middle">💰 Total Omset</text>
+          </g>
+
+          <!-- Input Bar -->
+          <g id="Input_Box" transform="translate(0, 40)">
+            <rect width="810" height="50" rx="8" fill="#F8FAFC" stroke="#CBD5E1" />
+            <text x="18" y="31" font-size="13" fill="#94A3B8">Tanyakan seputar pesanan, teknisi, peralatan, atau kendala alat rumah tangga...</text>
+            
+            <rect x="825" width="100" height="50" rx="8" fill="#1565C0" />
+            <text x="875" y="31" font-size="14" font-weight="700" fill="#FFFFFF" text-anchor="middle">Kirim ➤</text>
+          </g>
+        </g>
+      </g>
+    </g>
+    
+
+    </g>
+
+    <!-- ARTBOARD 4: ADMIN ANALYTICS & DISPATCHER -->
+    <g id="Frame_04_Admin_Dashboard" transform="translate(1560, 1080)">
+      <rect width="1440" height="960" fill="#F8FAFC" rx="12" stroke="#CBD5E1" stroke-width="2" />
+      
+  
+    
+    <!-- NAVBAR GLOBAL -->
+    <g id="Navbar_Global">
+      <rect width="1440" height="72" fill="#1565C0" />
+      <g id="Brand_Logo" transform="translate(60, 20)">
+        <rect width="32" height="32" rx="8" fill="#FFFFFF" fill-opacity="0.2" />
+        <path d="M16 8L8 15V24H13V19H19V24H24V15L16 8Z" fill="#FFFFFF" />
+        <text x="42" y="22" font-size="18" font-weight="700" fill="#FFFFFF">HomeCare Service</text>
+        <text x="195" y="21" font-size="12" font-weight="600" fill="#93C5FD">— Admin Operations Portal</text>
+      </g>
+      <g id="Nav_Links" transform="translate(480, 26)">
+        <text x="0" y="16" font-size="14" font-weight="600" fill="#FFFFFF">Beranda</text>
+        <text x="90" y="16" font-size="14" font-weight="600" fill="#BFDBFE">AI Diagnosis</text>
+        <text x="210" y="16" font-size="14" font-weight="600" fill="#BFDBFE">Pesanan Saya</text>
+        <text x="340" y="16" font-size="14" font-weight="600" fill="#BFDBFE">AI Assistant</text>
+        <text x="460" y="16" font-size="14" font-weight="600" fill="#BFDBFE">Pembayaran</text>
+      </g>
+      <g id="User_Profile" transform="translate(1180, 18)">
+        <rect width="90" height="36" rx="18" fill="#F59E0B" />
+        <text x="45" y="22" font-size="11" font-weight="700" fill="#FFFFFF" text-anchor="middle">ADMIN</text>
+        <rect x="100" width="100" height="36" rx="18" fill="#EF4444" />
+        <text x="150" y="22" font-size="12" font-weight="600" fill="#FFFFFF" text-anchor="middle">Keluar</text>
+      </g>
+    </g>
+    
+    
+    <g id="Admin_Content" transform="translate(60, 100)">
+      <text x="0" y="26" font-size="24" font-weight="700" fill="#1E293B">Dashboard Administrator &amp; Pemantauan Kinerja</text>
+      <text x="0" y="52" font-size="14" font-weight="400" fill="#64748B">Manajemen operasional pesanan servis, penugasan teknisi lapangan, dan analisis finansial riil</text>
+
+      <!-- 4 METRIC STAT CARDS -->
+      <g id="Metric_Cards" transform="translate(0, 75)">
+        <g id="Stat_Omset">
+          <rect width="310" height="110" rx="10" fill="#FFFFFF" stroke="#E2E8F0" filter="url(#shadow-sm)" />
+          <rect x="20" y="20" width="10" height="70" rx="5" fill="#10B981" />
+          <text x="45" y="42" font-size="12" font-weight="600" fill="#64748B">TOTAL OMSET LUNAS</text>
+          <text x="45" y="75" font-size="22" font-weight="800" fill="#10B981">Rp 4.850.000</text>
+        </g>
+
+        <g id="Stat_Selesai" transform="translate(335, 0)">
+          <rect width="310" height="110" rx="10" fill="#FFFFFF" stroke="#E2E8F0" filter="url(#shadow-sm)" />
+          <rect x="20" y="20" width="10" height="70" rx="5" fill="#3B82F6" />
+          <text x="45" y="42" font-size="12" font-weight="600" fill="#64748B">PESANAN SELESAI</text>
+          <text x="45" y="75" font-size="22" font-weight="800" fill="#1E40AF">8 Servis Tuntas</text>
+        </g>
+
+        <g id="Stat_Aktif" transform="translate(670, 0)">
+          <rect width="310" height="110" rx="10" fill="#FFFFFF" stroke="#E2E8F0" filter="url(#shadow-sm)" />
+          <rect x="20" y="20" width="10" height="70" rx="5" fill="#F59E0B" />
+          <text x="45" y="42" font-size="12" font-weight="600" fill="#64748B">PESANAN AKTIF</text>
+          <text x="45" y="75" font-size="22" font-weight="800" fill="#B45309">3 Sedang Berjalan</text>
+        </g>
+
+        <g id="Stat_Rating" transform="translate(1005, 0)">
+          <rect width="310" height="110" rx="10" fill="#FFFFFF" stroke="#E2E8F0" filter="url(#shadow-sm)" />
+          <rect x="20" y="20" width="10" height="70" rx="5" fill="#8B5CF6" />
+          <text x="45" y="42" font-size="12" font-weight="600" fill="#64748B">RATING KEPUASAN</text>
+          <text x="45" y="75" font-size="22" font-weight="800" fill="#6D28D9">⭐ 4.9 / 5.0 (98%)</text>
+        </g>
+      </g>
+
+      <!-- DISPATCHER TABLE: ORDERS REQUIRING ASSIGNMENT -->
+      <g id="Dispatcher_Table" transform="translate(0, 215)">
+        <rect width="1320" height="520" rx="12" fill="#FFFFFF" stroke="#E2E8F0" filter="url(#shadow-sm)" />
+        <g transform="translate(24, 24)">
+          <text x="0" y="20" font-size="16" font-weight="700" fill="#1E293B">Daftar Antrean Servis Masuk &amp; Penugasan Teknisi (Dispatcher)</text>
+          
+          <!-- Table Header -->
+          <g id="Tbl_Header" transform="translate(0, 45)">
+            <rect width="1272" height="40" rx="6" fill="#F1F5F9" />
+            <text x="20" y="25" font-size="12" font-weight="700" fill="#475569">ID ORDER</text>
+            <text x="140" y="25" font-size="12" font-weight="700" fill="#475569">PERALATAN</text>
+            <text x="360" y="25" font-size="12" font-weight="700" fill="#475569">PELANGGAN</text>
+            <text x="560" y="25" font-size="12" font-weight="700" fill="#475569">JADWAL</text>
+            <text x="760" y="25" font-size="12" font-weight="700" fill="#475569">STATUS</text>
+            <text x="940" y="25" font-size="12" font-weight="700" fill="#475569">PENUGASAN TEKNISI</text>
+          </g>
+
+          <!-- Row 1 (PENDING) -->
+          <g id="Row_1" transform="translate(0, 95)">
+            <rect width="1272" height="60" rx="6" fill="#FFFFFF" stroke="#E2E8F0" />
+            <text x="20" y="35" font-size="13" font-weight="700" fill="#1565C0">#ORD-0014</text>
+            <text x="140" y="35" font-size="13" fill="#1E293B">AC Panasonic Inverter</text>
+            <text x="360" y="35" font-size="13" fill="#1E293B">Qonita Goniyun Ulum</text>
+            <text x="560" y="35" font-size="13" fill="#64748B">15 Nov, 14:00 WIB</text>
+            <rect x="760" y="16" width="90" height="26" rx="13" fill="#FEF3C7" />
+            <text x="805" y="33" font-size="11" font-weight="700" fill="#B45309" text-anchor="middle">PENDING</text>
+            
+            <rect x="940" y="14" width="200" height="32" rx="6" fill="#F8FAFC" stroke="#CBD5E1" />
+            <text x="955" y="34" font-size="12" fill="#0F172A">Herman (Available)</text>
+            <rect x="1150" y="14" width="105" height="32" rx="6" fill="#1565C0" />
+            <text x="1202" y="34" font-size="12" font-weight="600" fill="#FFFFFF" text-anchor="middle">Tugaskan</text>
+          </g>
+
+          <!-- Row 2 (ASSIGNED) -->
+          <g id="Row_2" transform="translate(0, 165)">
+            <rect width="1272" height="60" rx="6" fill="#FFFFFF" stroke="#E2E8F0" />
+            <text x="20" y="35" font-size="13" font-weight="700" fill="#1565C0">#ORD-0012</text>
+            <text x="140" y="35" font-size="13" fill="#1E293B">Kompor Gas Rinnai</text>
+            <text x="360" y="35" font-size="13" fill="#1E293B">Qonita Goniyun Ulum</text>
+            <text x="560" y="35" font-size="13" fill="#64748B">14 Nov, 10:00 WIB</text>
+            <rect x="760" y="16" width="95" height="26" rx="13" fill="#E0E7FF" />
+            <text x="807" y="33" font-size="11" font-weight="700" fill="#4338CA" text-anchor="middle">ASSIGNED</text>
+            <text x="940" y="35" font-size="13" font-weight="600" fill="#1E40AF">Teknisi: Herman</text>
+          </g>
+
+          <!-- Row 3 (IN_PROGRESS) -->
+          <g id="Row_3" transform="translate(0, 235)">
+            <rect width="1272" height="60" rx="6" fill="#FFFFFF" stroke="#E2E8F0" />
+            <text x="20" y="35" font-size="13" font-weight="700" fill="#1565C0">#ORD-0007</text>
+            <text x="140" y="35" font-size="13" fill="#1E293B">Kulkas Sharp 2 Pintu</text>
+            <text x="360" y="35" font-size="13" fill="#1E293B">Yudhistira Arie</text>
+            <text x="560" y="35" font-size="13" fill="#64748B">13 Nov, 13:00 WIB</text>
+            <rect x="760" y="16" width="110" height="26" rx="13" fill="#E0F2FE" />
+            <text x="815" y="33" font-size="11" font-weight="700" fill="#0369A1" text-anchor="middle">IN PROGRESS</text>
+            <text x="940" y="35" font-size="13" font-weight="600" fill="#1E40AF">Teknisi: Herman (Servis Lokasi)</text>
+          </g>
+
+          <!-- Row 4 (COMPLETED) -->
+          <g id="Row_4" transform="translate(0, 305)">
+            <rect width="1272" height="60" rx="6" fill="#FFFFFF" stroke="#E2E8F0" />
+            <text x="20" y="35" font-size="13" font-weight="700" fill="#1565C0">#ORD-0005</text>
+            <text x="140" y="35" font-size="13" fill="#1E293B">Mesin Cuci LG Inverter</text>
+            <text x="360" y="35" font-size="13" fill="#1E293B">Budi Santoso</text>
+            <text x="560" y="35" font-size="13" fill="#64748B">12 Nov, 09:30 WIB</text>
+            <rect x="760" y="16" width="105" height="26" rx="13" fill="#D1FAE5" />
+            <text x="812" y="33" font-size="11" font-weight="700" fill="#047857" text-anchor="middle">COMPLETED</text>
+            <text x="940" y="35" font-size="13" font-weight="600" fill="#15803D">Lunas: Rp 165.000 (PAID)</text>
+          </g>
+        </g>
+      </g>
+    </g>
+    
+
+    </g>
+    
+</svg>

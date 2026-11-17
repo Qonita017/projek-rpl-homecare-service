@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1440" height="960" viewBox="0 0 1440 960" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap');
+      text { font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; }
+    </style>
+    <filter id="shadow-sm" x="-5%" y="-5%" width="110%" height="110%" filterUnits="userSpaceOnUse">
+      <feDropShadow dx="0" dy="1" stdDeviation="2" flood-color="#000000" flood-opacity="0.05" />
+    </filter>
+    <filter id="shadow-md" x="-10%" y="-10%" width="120%" height="120%" filterUnits="userSpaceOnUse">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#000000" flood-opacity="0.08" />
+    </filter>
+  </defs>
+  <rect width="1440" height="960" fill="#F8FAFC" />
+  
+    
+    <!-- NAVBAR GLOBAL -->
+    <g id="Navbar_Global">
+      <rect width="1440" height="72" fill="#1565C0" />
+      <g id="Brand_Logo" transform="translate(60, 20)">
+        <rect width="32" height="32" rx="8" fill="#FFFFFF" fill-opacity="0.2" />
+        <path d="M16 8L8 15V24H13V19H19V24H24V15L16 8Z" fill="#FFFFFF" />
+        <text x="42" y="22" font-size="18" font-weight="700" fill="#FFFFFF">HomeCare Service</text>
+        <text x="195" y="21" font-size="12" font-weight="600" fill="#93C5FD">— Detail Pesanan &amp; Pelacakan</text>
+      </g>
+      <g id="Nav_Links" transform="translate(480, 26)">
+        <text x="0" y="16" font-size="14" font-weight="600" fill="#BFDBFE">Beranda</text>
+        <text x="90" y="16" font-size="14" font-weight="600" fill="#BFDBFE">AI Diagnosis</text>
+        <text x="210" y="16" font-size="14" font-weight="600" fill="#FFFFFF">Pesanan Saya</text>
+        <text x="340" y="16" font-size="14" font-weight="600" fill="#BFDBFE">AI Assistant</text>
+        <text x="460" y="16" font-size="14" font-weight="600" fill="#BFDBFE">Pembayaran</text>
+      </g>
+      <g id="User_Profile" transform="translate(1180, 18)">
+        <rect width="90" height="36" rx="18" fill="#F59E0B" />
+        <text x="45" y="22" font-size="11" font-weight="700" fill="#FFFFFF" text-anchor="middle">CUSTOMER</text>
+        <rect x="100" width="100" height="36" rx="18" fill="#EF4444" />
+        <text x="150" y="22" font-size="12" font-weight="600" fill="#FFFFFF" text-anchor="middle">Keluar</text>
+      </g>
+    </g>
+    
+    
+    <g id="Tracking_Content" transform="translate(60, 100)">
+      <text x="0" y="26" font-size="24" font-weight="700" fill="#1E293B">Detail Pesanan Servis #ORD-0014</text>
+      <text x="0" y="52" font-size="14" font-weight="400" fill="#64748B">Pantau linimasa kemajuan perbaikan dan rincian transaksi secara real-time</text>
+
+      <!-- TIMELINE CARD -->
+      <g id="Timeline_Card" transform="translate(0, 75)">
+        <rect width="1320" height="150" rx="12" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1" filter="url(#shadow-sm)" />
+        <text x="24" y="35" font-size="16" font-weight="700" fill="#1E293B">Linimasa Progres Servis (Real-Time Tracker)</text>
+        
+        <!-- 6 STEP NODES -->
+        <g id="Step_Nodes" transform="translate(60, 65)">
+          <!-- Node 1: PENDING -->
+          <circle cx="50" cy="20" r="16" fill="#10B981" />
+          <text x="50" y="25" font-size="12" font-weight="700" fill="#FFFFFF" text-anchor="middle">✓</text>
+          <text x="50" y="52" font-size="12" font-weight="700" fill="#10B981" text-anchor="middle">PENDING</text>
+          <text x="50" y="68" font-size="10" fill="#64748B" text-anchor="middle">Pesanan Dibuat</text>
+
+          <line x1="75" y1="20" x2="225" y2="20" stroke="#10B981" stroke-width="3" />
+
+          <!-- Node 2: ASSIGNED -->
+          <circle cx="250" cy="20" r="16" fill="#10B981" />
+          <text x="250" y="25" font-size="12" font-weight="700" fill="#FFFFFF" text-anchor="middle">✓</text>
+          <text x="250" y="52" font-size="12" font-weight="700" fill="#10B981" text-anchor="middle">ASSIGNED</text>
+          <text x="250" y="68" font-size="10" fill="#64748B" text-anchor="middle">Teknisi Ditugaskan</text>
+
+          <line x1="275" y1="20" x2="425" y2="20" stroke="#10B981" stroke-width="3" />
+
+          <!-- Node 3: ACCEPTED -->
+          <circle cx="450" cy="20" r="16" fill="#10B981" />
+          <text x="450" y="25" font-size="12" font-weight="700" fill="#FFFFFF" text-anchor="middle">✓</text>
+          <text x="450" y="52" font-size="12" font-weight="700" fill="#10B981" text-anchor="middle">ACCEPTED</text>
+          <text x="450" y="68" font-size="10" fill="#64748B" text-anchor="middle">Job Dikonfirmasi</text>
+
+          <line x1="475" y1="20" x2="625" y2="20" stroke="#10B981" stroke-width="3" />
+
+          <!-- Node 4: ON_THE_WAY -->
+          <circle cx="650" cy="20" r="16" fill="#10B981" />
+          <text x="650" y="25" font-size="12" font-weight="700" fill="#FFFFFF" text-anchor="middle">✓</text>
+          <text x="650" y="52" font-size="12" font-weight="700" fill="#10B981" text-anchor="middle">ON THE WAY</text>
+          <text x="650" y="68" font-size="10" fill="#64748B" text-anchor="middle">Teknisi Berangkat</text>
+
+          <line x1="675" y1="20" x2="825" y2="20" stroke="#10B981" stroke-width="3" />
+
+          <!-- Node 5: IN_PROGRESS -->
+          <circle cx="850" cy="20" r="16" fill="#10B981" />
+          <text x="850" y="25" font-size="12" font-weight="700" fill="#FFFFFF" text-anchor="middle">✓</text>
+          <text x="850" y="52" font-size="12" font-weight="700" fill="#10B981" text-anchor="middle">IN PROGRESS</text>
+          <text x="850" y="68" font-size="10" fill="#64748B" text-anchor="middle">Sedang Diperbaiki</text>
+
+          <line x1="875" y1="20" x2="1025" y2="20" stroke="#10B981" stroke-width="3" />
+
+          <!-- Node 6: COMPLETED -->
+          <circle cx="1050" cy="20" r="16" fill="#10B981" />
+          <text x="1050" y="25" font-size="12" font-weight="700" fill="#FFFFFF" text-anchor="middle">✓</text>
+          <text x="1050" y="52" font-size="12" font-weight="700" fill="#15803D" text-anchor="middle">COMPLETED</text>
+          <text x="1050" y="68" font-size="10" fill="#15803D" text-anchor="middle">Servis Selesai</text>
+        </g>
+      </g>
+
+      <!-- DETAIL COLUMNS: LEFT ORDER INFO & RIGHT RECEIPT -->
+      <g id="Details_Split" transform="translate(0, 250)">
+        <!-- Left: Detail Order -->
+        <g id="Order_Info">
+          <rect width="640" height="480" rx="12" fill="#FFFFFF" stroke="#E2E8F0" filter="url(#shadow-sm)" />
+          <g transform="translate(24, 24)">
+            <text x="0" y="20" font-size="16" font-weight="700" fill="#1E293B">Informasi Pesanan &amp; Teknisi</text>
+            
+            <g transform="translate(0, 45)">
+              <text x="0" y="15" font-size="12" font-weight="600" fill="#64748B">Peralatan:</text>
+              <text x="180" y="15" font-size="13" font-weight="700" fill="#1E293B">Air Conditioner (AC Panasonic Inverter)</text>
+              
+              <text x="0" y="45" font-size="12" font-weight="600" fill="#64748B">Keluhan:</text>
+              <text x="180" y="45" font-size="13" fill="#1E293B">AC kurang dingin &amp; berbunyi mendesis halus</text>
+              
+              <text x="0" y="75" font-size="12" font-weight="600" fill="#64748B">Jadwal Servis:</text>
+              <text x="180" y="75" font-size="13" fill="#1E293B">15 November 2026, 14:00 WIB</text>
+              
+              <text x="0" y="105" font-size="12" font-weight="600" fill="#64748B">Alamat Lokasi:</text>
+              <text x="180" y="105" font-size="13" fill="#1E293B">Jln. Perjuangan No. 10, Cirebon</text>
+              
+              <text x="0" y="135" font-size="12" font-weight="600" fill="#64748B">Teknisi Bertugas:</text>
+              <text x="180" y="135" font-size="13" font-weight="700" fill="#1565C0">Herman (Spesialis AC - Pengalaman 5 Thn)</text>
+              
+              <text x="0" y="165" font-size="12" font-weight="600" fill="#64748B">Hasil Diagnosa AI:</text>
+              <text x="180" y="165" font-size="12.5" fill="#475569">Kebocoran mikro freon pada nepel sambungan</text>
+
+              <line x1="0" y1="190" x2="590" y2="190" stroke="#E2E8F0" stroke-width="1" />
+
+              <text x="0" y="220" font-size="14" font-weight="700" fill="#1E293B">Laporan Servis Fisik Teknisi:</text>
+              <text x="0" y="245" font-size="12.5" fill="#334155">• Hasil Pemeriksaan: Koil kondensor kotor &amp; tekanan freon R32 tersisa 60 PSI.</text>
+              <text x="0" y="268" font-size="12.5" fill="#334155">• Tindakan Perbaikan: Cuci steam unit indoor-outdoor, flaring ulang nepel, isi freon.</text>
+              <text x="0" y="291" font-size="12.5" fill="#334155">• Catatan Garansi: Garansi servis dingin selama 30 hari kalender.</text>
+            </g>
+          </g>
+        </g>
+
+        <!-- Right: Official E-Receipt Kwitansi -->
+        <g id="Receipt_Box" transform="translate(670, 0)">
+          <rect width="650" height="480" rx="12" fill="#FFFFFF" stroke="#E2E8F0" filter="url(#shadow-sm)" />
+          <g transform="translate(30, 24)">
+            <text x="0" y="20" font-size="16" font-weight="700" fill="#1E293B">Kuitansi Pembayaran Elektronik (E-Receipt)</text>
+            <text x="0" y="42" font-size="12" fill="#64748B">No. Kwitansi: KW/20261115/ORD-0014</text>
+            
+            <rect y="60" width="590" height="1" fill="#E2E8F0" />
+
+            <!-- Bill Breakdown Table -->
+            <g transform="translate(0, 80)">
+              <text x="0" y="15" font-size="13" font-weight="600" fill="#334155">1. Jasa Servis &amp; Cuci Steam AC</text>
+              <text x="590" y="15" font-size="13" font-weight="600" fill="#334155" text-anchor="end">Rp 75.000</text>
+              
+              <text x="0" y="45" font-size="13" font-weight="600" fill="#334155">2. Pengisian Ulang Gas Freon R32</text>
+              <text x="590" y="45" font-size="13" font-weight="600" fill="#334155" text-anchor="end">Rp 105.000</text>
+
+              <line x1="0" y1="70" x2="590" y2="70" stroke="#CBD5E1" stroke-width="1" stroke-dasharray="4 4" />
+
+              <text x="0" y="105" font-size="16" font-weight="700" fill="#0F172A">TOTAL TAGIHAN AKHIR:</text>
+              <text x="590" y="105" font-size="20" font-weight="800" fill="#15803D" text-anchor="end">Rp 180.000</text>
+              
+              <text x="0" y="140" font-size="12" fill="#64748B">Metode Pembayaran: Transfer M-Banking (Bank BCA)</text>
+              <text x="0" y="160" font-size="12" fill="#64748B">Waktu Pelunasan: 15 November 2026, 15:35 WIB</text>
+              
+              <!-- STAMP LUNAS -->
+              <g transform="translate(380, 160)">
+                <rect width="180" height="50" rx="8" fill="#DCFCE7" stroke="#15803D" stroke-width="2" />
+                <text x="90" y="32" font-size="16" font-weight="800" fill="#15803D" text-anchor="middle">✓ LUNAS (PAID)</text>
+              </g>
+
+              <!-- BUTTONS -->
+              <g transform="translate(0, 240)">
+                <rect width="280" height="46" rx="8" fill="#334155" />
+                <text x="140" y="28" font-size="13" font-weight="600" fill="#FFFFFF" text-anchor="middle">📄 Cetak Kwitansi PDF</text>
+
+                <rect x="300" width="290" height="46" rx="8" fill="#F59E0B" />
+                <text x="445" y="28" font-size="13" font-weight="600" fill="#FFFFFF" text-anchor="middle">⭐ Beri Rating &amp; Ulasan (1-5)</text>
+              </g>
+            </g>
+          </g>
+        </g>
+      </g>
+    </g>
+    
+</svg>

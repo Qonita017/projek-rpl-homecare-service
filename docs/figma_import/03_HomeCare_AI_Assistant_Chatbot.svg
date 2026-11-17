@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1440" height="960" viewBox="0 0 1440 960" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap');
+      text { font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; }
+    </style>
+    <filter id="shadow-sm" x="-5%" y="-5%" width="110%" height="110%" filterUnits="userSpaceOnUse">
+      <feDropShadow dx="0" dy="1" stdDeviation="2" flood-color="#000000" flood-opacity="0.05" />
+    </filter>
+    <filter id="shadow-md" x="-10%" y="-10%" width="120%" height="120%" filterUnits="userSpaceOnUse">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#000000" flood-opacity="0.08" />
+    </filter>
+  </defs>
+  <rect width="1440" height="960" fill="#F8FAFC" />
+  
+    
+    <!-- NAVBAR GLOBAL -->
+    <g id="Navbar_Global">
+      <rect width="1440" height="72" fill="#1565C0" />
+      <g id="Brand_Logo" transform="translate(60, 20)">
+        <rect width="32" height="32" rx="8" fill="#FFFFFF" fill-opacity="0.2" />
+        <path d="M16 8L8 15V24H13V19H19V24H24V15L16 8Z" fill="#FFFFFF" />
+        <text x="42" y="22" font-size="18" font-weight="700" fill="#FFFFFF">HomeCare Service</text>
+        <text x="195" y="21" font-size="12" font-weight="600" fill="#93C5FD">— HomeCare AI Assistant</text>
+      </g>
+      <g id="Nav_Links" transform="translate(480, 26)">
+        <text x="0" y="16" font-size="14" font-weight="600" fill="#BFDBFE">Beranda</text>
+        <text x="90" y="16" font-size="14" font-weight="600" fill="#BFDBFE">AI Diagnosis</text>
+        <text x="210" y="16" font-size="14" font-weight="600" fill="#BFDBFE">Pesanan Saya</text>
+        <text x="340" y="16" font-size="14" font-weight="600" fill="#FFFFFF">AI Assistant</text>
+        <text x="460" y="16" font-size="14" font-weight="600" fill="#BFDBFE">Pembayaran</text>
+      </g>
+      <g id="User_Profile" transform="translate(1180, 18)">
+        <rect width="90" height="36" rx="18" fill="#F59E0B" />
+        <text x="45" y="22" font-size="11" font-weight="700" fill="#FFFFFF" text-anchor="middle">ADMIN</text>
+        <rect x="100" width="100" height="36" rx="18" fill="#EF4444" />
+        <text x="150" y="22" font-size="12" font-weight="600" fill="#FFFFFF" text-anchor="middle">Keluar</text>
+      </g>
+    </g>
+    
+    
+    <g id="Chatbot_Layout" transform="translate(60, 95)">
+      <!-- SIDEBAR RIWAYAT CHAT (From user screenshot) -->
+      <g id="Chat_History_Sidebar">
+        <rect width="320" height="740" rx="12" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1" filter="url(#shadow-sm)" />
+        <g transform="translate(20, 24)">
+          <text x="0" y="20" font-size="16" font-weight="700" fill="#1E293B">Riwayat Chat Saya</text>
+          <rect x="230" y="0" width="30" height="30" rx="15" fill="#EFF6FF" stroke="#BFDBFE" />
+          <text x="245" y="20" font-size="16" font-weight="700" fill="#1D4ED8" text-anchor="middle">+</text>
+          
+          <!-- History Items -->
+          <g transform="translate(0, 45)">
+            <rect width="280" height="52" rx="8" fill="#EFF6FF" stroke="#BFDBFE" stroke-width="1" />
+            <text x="14" y="24" font-size="13" font-weight="600" fill="#1E40AF">💬 berapa jumlah omset?</text>
+            <text x="14" y="42" font-size="10.5" fill="#64748B">13 Nov, 13:41  •  28 pesan</text>
+          </g>
+
+          <g transform="translate(0, 110)">
+            <rect width="280" height="52" rx="8" fill="#FFFFFF" stroke="#E2E8F0" />
+            <text x="14" y="24" font-size="13" font-weight="500" fill="#334155">💬 siapa saja customernya?</text>
+            <text x="14" y="42" font-size="10.5" fill="#94A3B8">13 Nov, 13:09  •  2 pesan</text>
+          </g>
+
+          <g transform="translate(0, 175)">
+            <rect width="280" height="52" rx="8" fill="#FFFFFF" stroke="#E2E8F0" />
+            <text x="14" y="24" font-size="13" font-weight="500" fill="#334155">💬 pesanan yang selesai?</text>
+            <text x="14" y="42" font-size="10.5" fill="#94A3B8">12 Nov, 18:52  •  8 pesan</text>
+          </g>
+
+          <g transform="translate(0, 240)">
+            <rect width="280" height="52" rx="8" fill="#FFFFFF" stroke="#E2E8F0" />
+            <text x="14" y="24" font-size="13" font-weight="500" fill="#334155">💬 bagaimana ketersediaan teknisi?</text>
+            <text x="14" y="42" font-size="10.5" fill="#94A3B8">09 Nov, 21:54  •  12 pesan</text>
+          </g>
+
+          <g transform="translate(0, 305)">
+            <rect width="280" height="52" rx="8" fill="#FFFFFF" stroke="#E2E8F0" />
+            <text x="14" y="24" font-size="13" font-weight="500" fill="#334155">💬 katalog harga alat ac?</text>
+            <text x="14" y="42" font-size="10.5" fill="#94A3B8">08 Nov, 21:23  •  18 pesan</text>
+          </g>
+        </g>
+      </g>
+
+      <!-- MAIN CHAT AREA (From user screenshot) -->
+      <g id="Chat_Main_Area" transform="translate(345, 0)">
+        <rect width="975" height="740" rx="12" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1" filter="url(#shadow-sm)" />
+        
+        <!-- CHAT HEADER -->
+        <g id="Chat_Header" transform="translate(24, 20)">
+          <rect width="40" height="40" rx="20" fill="#EFF6FF" />
+          <text x="20" y="26" font-size="20" text-anchor="middle">🤖</text>
+          <text x="52" y="22" font-size="16" font-weight="700" fill="#1E293B">HomeCare AI Assistant</text>
+          <rect x="250" y="4" width="115" height="24" rx="12" fill="#DBEAFE" />
+          <text x="307" y="20" font-size="11" font-weight="700" fill="#1E40AF" text-anchor="middle">Admin Assistant</text>
+          <text x="52" y="38" font-size="11" fill="#10B981">● Terhubung langsung dengan Database &amp; Sistem HomeCare (Live)</text>
+          <line x1="0" y1="52" x2="925" y2="52" stroke="#E2E8F0" stroke-width="1" />
+        </g>
+
+        <!-- CHAT MESSAGES BODY -->
+        <g id="Chat_Messages" transform="translate(24, 90)">
+          <!-- User message 1 -->
+          <g id="Msg_User_1" transform="translate(480, 20)">
+            <rect width="440" height="42" rx="12" fill="#1565C0" />
+            <text x="20" y="26" font-size="13" fill="#FFFFFF">ada berapa jumlah pesanan selesai saat ini?</text>
+          </g>
+
+          <!-- AI message 1 -->
+          <g id="Msg_AI_1" transform="translate(0, 80)">
+            <rect width="40" height="40" rx="20" fill="#1565C0" />
+            <text x="20" y="26" font-size="18" fill="#FFFFFF" text-anchor="middle">🤖</text>
+            <rect x="52" width="580" height="50" rx="12" fill="#F1F5F9" />
+            <text x="72" y="30" font-size="13" fill="#1E293B">Jumlah pesanan yang telah selesai di sistem saat ini ada 8 pesanan.</text>
+          </g>
+
+          <!-- User message 2 -->
+          <g id="Msg_User_2" transform="translate(620, 150)">
+            <rect width="300" height="42" rx="12" fill="#1565C0" />
+            <text x="20" y="26" font-size="13" fill="#FFFFFF">siapa saja customernya?</text>
+          </g>
+
+          <!-- AI message 2 (Actual live DB response from screenshot) -->
+          <g id="Msg_AI_2" transform="translate(0, 210)">
+            <rect width="40" height="40" rx="20" fill="#1565C0" />
+            <text x="20" y="26" font-size="18" fill="#FFFFFF" text-anchor="middle">🤖</text>
+            <rect x="52" width="760" height="150" rx="12" fill="#F1F5F9" />
+            <text x="72" y="30" font-size="12.5" font-weight="700" fill="#1E40AF">HomeCare AI Assistant (Hasil Query Database Live):</text>
+            <text x="72" y="55" font-size="12" fill="#1E293B">Berikut rincian customer terdaftar di sistem:</text>
+            <text x="72" y="78" font-size="11.5" fill="#334155">• Customer #2: Qonita Goniyun Ulum | Telp: 085314724809 | Alamat: Jln. Perjuangan No. 10</text>
+            <text x="72" y="100" font-size="11.5" fill="#334155">• Customer #3: Chat Tester Customer | Telp: 081299998888 | Alamat: Jl. Chat AI No. 1</text>
+            <text x="72" y="122" font-size="11.5" fill="#334155">• Customer #16: Yudhistira | Telp: 085864394008 | Alamat: Jln. Mundu No. 08</text>
+          </g>
+        </g>
+
+        <!-- CHAT INPUT & QUICK CHIPS -->
+        <g id="Chat_Input_Area" transform="translate(24, 610)">
+          <!-- Quick Prompt Chips -->
+          <g id="Chips">
+            <text x="0" y="16" font-size="12" font-weight="600" fill="#64748B">Tanya Cepat:</text>
+            <rect x="80" y="0" width="115" height="26" rx="13" fill="#EFF6FF" stroke="#BFDBFE" />
+            <text x="137" y="17" font-size="11" fill="#1E40AF" text-anchor="middle">📦 Pesanan Saya</text>
+            
+            <rect x="205" y="0" width="105" height="26" rx="13" fill="#EFF6FF" stroke="#BFDBFE" />
+            <text x="257" y="17" font-size="11" fill="#1E40AF" text-anchor="middle">👨‍🔧 Tim Teknisi</text>
+            
+            <rect x="320" y="0" width="110" height="26" rx="13" fill="#EFF6FF" stroke="#BFDBFE" />
+            <text x="375" y="17" font-size="11" fill="#1E40AF" text-anchor="middle">📋 Katalog Alat</text>
+            
+            <rect x="440" y="0" width="120" height="26" rx="13" fill="#EFF6FF" stroke="#BFDBFE" />
+            <text x="500" y="17" font-size="11" fill="#1E40AF" text-anchor="middle">⭐ Rating &amp; Ulasan</text>
+
+            <rect x="570" y="0" width="105" height="26" rx="13" fill="#EFF6FF" stroke="#BFDBFE" />
+            <text x="622" y="17" font-size="11" fill="#1E40AF" text-anchor="middle">💰 Total Omset</text>
+          </g>
+
+          <!-- Input Bar -->
+          <g id="Input_Box" transform="translate(0, 40)">
+            <rect width="810" height="50" rx="8" fill="#F8FAFC" stroke="#CBD5E1" />
+            <text x="18" y="31" font-size="13" fill="#94A3B8">Tanyakan seputar pesanan, teknisi, peralatan, atau kendala alat rumah tangga...</text>
+            
+            <rect x="825" width="100" height="50" rx="8" fill="#1565C0" />
+            <text x="875" y="31" font-size="14" font-weight="700" fill="#FFFFFF" text-anchor="middle">Kirim ➤</text>
+          </g>
+        </g>
+      </g>
+    </g>
+    
+</svg>
